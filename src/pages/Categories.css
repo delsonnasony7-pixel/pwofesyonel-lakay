@@ -1,0 +1,414 @@
+/* =========================================
+   CATEGORIES PAGE
+   CREAM / COFFEE PREMIUM STYLE
+========================================= */
+
+.categories-page {
+  min-height: 100vh;
+  background: #fbf7f1;
+  color: #3a291f;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.categories-header {
+  position: relative;
+  padding: 95px 20px 90px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f3e7d7 0%,
+      #ead8c1 100%
+    );
+}
+
+.categories-header::after {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -100px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.categories-header-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 850px;
+  margin: auto;
+
+  text-align: center;
+}
+
+.categories-header .page-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 8px 14px;
+
+  border: 1px solid #d8bea0;
+  border-radius: 30px;
+
+  background: rgba(255, 250, 243, 0.65);
+
+  color: #876441;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.categories-header h1 {
+  margin: 0;
+
+  color: #38271d;
+
+  font-size: 50px;
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.categories-header h1 span {
+  color: #87613c;
+}
+
+.categories-header p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  color: #715f50;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.categories-list-section {
+  padding: 90px 20px 110px;
+}
+
+.categories-container {
+  max-width: 1180px;
+  margin: auto;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.categories-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.categories-heading > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #9a744b;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.categories-heading h2 {
+  margin: 0 0 12px;
+
+  color: #39281e;
+
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.categories-heading p {
+  max-width: 600px;
+
+  margin: auto;
+
+  color: #806e5f;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.categories-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+/* =========================================
+   CATEGORY CARD
+========================================= */
+
+.category-large-card {
+  position: relative;
+
+  display: flex;
+  gap: 22px;
+
+  padding: 28px;
+
+  overflow: hidden;
+
+  background: #fffdf9;
+
+  border: 1px solid #eadfd1;
+  border-radius: 22px;
+
+  box-shadow:
+    0 6px 18px rgba(67, 45, 29, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.category-large-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -45px;
+  top: -45px;
+
+  border-radius: 50%;
+
+  background: #f5eadc;
+
+  transition: transform 0.35s ease;
+}
+
+.category-large-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #d9bea0;
+
+  box-shadow:
+    0 18px 40px rgba(67, 45, 29, 0.10);
+}
+
+.category-large-card:hover::before {
+  transform: scale(1.5);
+}
+
+
+/* =========================================
+   CATEGORY ICON
+========================================= */
+
+.category-card-icon {
+  position: relative;
+  z-index: 1;
+
+  width: 66px;
+  height: 66px;
+
+  min-width: 66px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    #f4e7d6,
+    #ead6bd
+  );
+
+  border: 1px solid #dfc8aa;
+
+  font-size: 29px;
+
+  box-shadow:
+    0 5px 12px rgba(84, 56, 34, 0.07);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.category-card-content {
+  position: relative;
+  z-index: 1;
+
+  flex: 1;
+}
+
+.category-card-content h3 {
+  margin: 2px 0 5px;
+
+  color: #3a291f;
+
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.category-card-content > p {
+  margin: 0 0 17px;
+
+  color: #a07850;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   SERVICE TAGS
+========================================= */
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.services-list span {
+  padding: 7px 11px;
+
+  background: #faf4ec;
+
+  border: 1px solid #eee1d2;
+  border-radius: 8px;
+
+  color: #6d5848;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.services-list span:hover {
+  background: #eee0ce;
+
+  border-color: #d9bea0;
+
+  color: #3d2b20;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+  .categories-header {
+    padding: 75px 20px 70px;
+  }
+
+  .categories-header h1 {
+    font-size: 40px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .categories-header {
+    padding: 60px 18px;
+  }
+
+  .categories-header h1 {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+  }
+
+  .categories-header p {
+    font-size: 14px;
+  }
+
+  .categories-list-section {
+    padding: 65px 16px 80px;
+  }
+
+  .categories-heading {
+    margin-bottom: 35px;
+  }
+
+  .categories-heading h2 {
+    font-size: 28px;
+  }
+
+  .category-large-card {
+    gap: 16px;
+    padding: 21px;
+  }
+
+  .category-card-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+  }
+
+  .category-card-content h3 {
+    font-size: 18px;
+  }
+
+  .services-list span {
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+}

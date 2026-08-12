@@ -1,0 +1,598 @@
+/* =========================================
+   ABOUT PAGE
+   PWOFESYONÈL LAKAY
+========================================= */
+
+.about-page {
+  min-height: 100vh;
+  background: #fbf7f1;
+  color: #35271f;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+  position: relative;
+  overflow: hidden;
+
+  padding: 105px 20px 100px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f0e2d0,
+      #dfc6a8
+    );
+}
+
+.about-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -140px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.about-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  left: -100px;
+  bottom: -130px;
+
+  border-radius: 50%;
+
+  background: rgba(129, 91, 52, 0.08);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.about-label {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 8px 15px;
+
+  border: 1px solid #d1b28f;
+  border-radius: 30px;
+
+  background: rgba(255, 250, 244, 0.7);
+
+  color: #8a6543;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.about-hero h1 {
+  margin: 0;
+
+  color: #34251d;
+
+  font-size: 52px;
+  line-height: 1.1;
+
+  font-weight: 850;
+
+  letter-spacing: -1.5px;
+}
+
+.about-hero h1 span {
+  color: #8a6038;
+}
+
+.about-hero p {
+  max-width: 680px;
+
+  margin: 24px auto 0;
+
+  color: #705c4b;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.about-container {
+  width: 100%;
+  max-width: 1120px;
+
+  margin: auto;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+
+.about-story {
+  padding: 100px 20px;
+  background: #fffdf9;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+
+  gap: 70px;
+}
+
+.about-story-text {
+  flex: 1;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #a0774d;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.about-story-text h2 {
+  max-width: 560px;
+
+  margin: 0 0 22px;
+
+  color: #38291f;
+
+  font-size: 36px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.about-story-text p {
+  max-width: 600px;
+
+  margin: 0 0 16px;
+
+  color: #756456;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   STORY CARD
+========================================= */
+
+.about-story-card {
+  width: 320px;
+
+  flex-shrink: 0;
+
+  padding: 40px 32px;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3e6d6,
+      #e5cfb4
+    );
+
+  border: 1px solid #dcc2a2;
+
+  box-shadow:
+    0 20px 45px rgba(74, 49, 29, 0.10);
+
+  text-align: center;
+}
+
+.about-card-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  font-size: 31px;
+}
+
+.about-story-card h3 {
+  margin: 0 0 12px;
+
+  color: #3b2a20;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.about-story-card p {
+  margin: 0;
+
+  color: #705a48;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   MISSION
+========================================= */
+
+.about-mission {
+  padding: 100px 20px;
+
+  background: #f5ede3;
+}
+
+.about-section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  margin: 0 0 15px;
+
+  color: #38291f;
+
+  font-size: 36px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.about-section-heading p {
+  margin: 0 auto;
+
+  max-width: 650px;
+
+  color: #776456;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   MISSION CARDS
+========================================= */
+
+.mission-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.mission-card {
+  padding: 32px 27px;
+
+  background: #fffdf9;
+
+  border: 1px solid #e7d9ca;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 7px 20px rgba(60, 40, 25, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #d5b792;
+
+  box-shadow:
+    0 18px 35px rgba(60, 40, 25, 0.10);
+}
+
+.mission-icon {
+  width: 55px;
+  height: 55px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #f1e3d1;
+
+  font-size: 24px;
+}
+
+.mission-card h3 {
+  margin: 0 0 9px;
+
+  color: #3b2a20;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.mission-card p {
+  margin: 0;
+
+  color: #776658;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+========================================= */
+
+.about-how {
+  padding: 100px 20px;
+
+  background: #fffdf9;
+}
+
+.about-steps {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.about-step {
+  position: relative;
+
+  padding: 30px;
+
+  border-left: 3px solid #d7b891;
+}
+
+.about-step > span {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #a1784e;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+.about-step h3 {
+  margin: 0 0 10px;
+
+  color: #39291f;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.about-step p {
+  margin: 0;
+
+  color: #756456;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.about-cta {
+  padding: 90px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5a3d29,
+      #825b3a
+    );
+}
+
+.about-cta-content {
+  max-width: 750px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.about-cta h2 {
+  margin: 0 0 15px;
+
+  color: #fffaf3;
+
+  font-size: 38px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.about-cta p {
+  margin: 0 auto 28px;
+
+  max-width: 600px;
+
+  color: #eadbca;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.about-cta-btn {
+  display: inline-block;
+
+  padding: 14px 25px;
+
+  border-radius: 10px;
+
+  background: #f5e4cf;
+
+  color: #4a3322;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.about-cta-btn:hover {
+  transform: translateY(-3px);
+
+  background: #fff8ef;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .about-hero {
+    padding: 80px 20px;
+  }
+
+  .about-hero h1 {
+    font-size: 42px;
+  }
+
+  .about-container {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 45px;
+  }
+
+  .about-story-card {
+    width: auto;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .about-step {
+    border-left: 0;
+    border-top: 3px solid #d7b891;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .about-hero {
+    padding: 65px 18px;
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+  }
+
+  .about-story,
+  .about-mission,
+  .about-how {
+    padding: 70px 18px;
+  }
+
+  .about-story-text h2,
+  .about-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .about-story-card {
+    padding: 30px 22px;
+  }
+
+  .mission-card {
+    padding: 25px 22px;
+  }
+
+  .about-step {
+    padding: 25px 5px;
+  }
+
+  .about-cta {
+    padding: 70px 18px;
+  }
+
+  .about-cta h2 {
+    font-size: 30px;
+  }
+}
