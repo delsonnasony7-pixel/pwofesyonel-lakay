@@ -5,24 +5,25 @@ import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
 
 const Navbar = () => {
-
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-
-  // Ouvri Login
   const openLogin = () => {
     setShowRegister(false);
     setShowLogin(true);
+    setMenuOpen(false);
   };
 
-
-  // Ouvri Register
   const openRegister = () => {
     setShowLogin(false);
     setShowRegister(true);
+    setMenuOpen(false);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <>
@@ -31,9 +32,7 @@ const Navbar = () => {
         <div className="navbar-container">
 
           {/* LOGO */}
-
-          <Link to="/" className="logo">
-
+          <Link to="/" className="logo" onClick={closeMenu}>
             <span className="logo-icon">
               PL
             </span>
@@ -41,17 +40,13 @@ const Navbar = () => {
             <span className="logo-text">
               Pwofesyonèl <strong>Lakay</strong>
             </span>
-
           </Link>
 
 
-          {/* MENU */}
-
+          {/* DESKTOP MENU */}
           <nav className="nav-links">
 
-            <Link to="/">
-              Akèy
-            </Link>
+            <Link to="/">Akèy</Link>
 
             <Link to="/professionals">
               Pwofesyonèl
@@ -72,8 +67,7 @@ const Navbar = () => {
           </nav>
 
 
-          {/* BUTTONS */}
-
+          {/* DESKTOP BUTTONS */}
           <div className="nav-actions">
 
             <button
@@ -83,6 +77,73 @@ const Navbar = () => {
               Konekte
             </button>
 
+            <button
+              className="register-btn"
+              onClick={openRegister}
+            >
+              Enskri
+            </button>
+
+          </div>
+
+
+          {/* MOBILE MENU BUTTON */}
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Ouvri meni"
+          >
+            {menuOpen ? "✕" : "☰"}
+          </button>
+
+        </div>
+
+
+        {/* MOBILE MENU */}
+        <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+
+          <Link to="/" onClick={closeMenu}>
+            Akèy
+          </Link>
+
+          <Link
+            to="/professionals"
+            onClick={closeMenu}
+          >
+            Pwofesyonèl
+          </Link>
+
+          <Link
+            to="/categories"
+            onClick={closeMenu}
+          >
+            Kategori
+          </Link>
+
+          <Link
+            to="/about"
+            onClick={closeMenu}
+          >
+            Sou nou
+          </Link>
+
+          <Link
+            to="/contact"
+            onClick={closeMenu}
+          >
+            Kontak
+          </Link>
+
+
+          {/* MOBILE BUTTONS */}
+          <div className="mobile-menu-actions">
+
+            <button
+              className="login-btn"
+              onClick={openLogin}
+            >
+              Konekte
+            </button>
 
             <button
               className="register-btn"
@@ -98,8 +159,7 @@ const Navbar = () => {
       </header>
 
 
-      {/* LOGIN */}
-
+      {/* LOGIN MODAL */}
       <LoginModal
         isOpen={showLogin}
         onClose={() => setShowLogin(false)}
@@ -107,8 +167,7 @@ const Navbar = () => {
       />
 
 
-      {/* REGISTER */}
-
+      {/* REGISTER MODAL */}
       <RegisterModal
         isOpen={showRegister}
         onClose={() => setShowRegister(false)}
@@ -118,6 +177,5 @@ const Navbar = () => {
     </>
   );
 };
-
 
 export default Navbar;
