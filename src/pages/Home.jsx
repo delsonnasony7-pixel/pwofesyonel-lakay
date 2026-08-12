@@ -1,3 +1,4 @@
+import "./Home.css";
 import Navbar from "../components/Navbar";
 import ProfessionalCard from "../components/ProfessionalCard";
 import Footer from "../components/Footer";

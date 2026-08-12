@@ -1,0 +1,126 @@
+.professional-card {
+  background: #ffffff;
+  border: 1px solid #eadfd3;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(70, 43, 26, 0.08);
+  transition: 0.3s ease;
+}
+
+.professional-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(70, 43, 26, 0.13);
+}
+
+/* IMAGE */
+
+.professional-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f1e5d9;
+}
+
+.professional-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.professional-card:hover .professional-image img {
+  transform: scale(1.04);
+}
+
+/* AVAILABLE BADGE */
+
+.available-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 11px;
+  background: #ffffff;
+  color: #557052;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* INFO */
+
+.professional-info {
+  padding: 22px;
+}
+
+.professional-info h3 {
+  margin: 0 0 6px;
+  color: #3b2416;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.professional-profession {
+  margin: 0 0 12px;
+  color: #8b674d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* RATING */
+
+.professional-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  color: #5b493b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.professional-rating span {
+  color: #d18a28;
+  font-size: 17px;
+}
+
+/* LOCATION */
+
+.professional-location {
+  margin: 0 0 18px;
+  color: #7b6b5e;
+  font-size: 13px;
+}
+
+/* BUTTON */
+
+.professional-btn {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #5c3824;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.professional-btn:hover {
+  background: #3f2518;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .professional-image {
+    height: 230px;
+  }
+
+  .professional-info {
+    padding: 20px;
+  }
+}

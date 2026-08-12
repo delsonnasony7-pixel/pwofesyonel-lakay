@@ -1,4 +1,4 @@
-
+import "./ProfessionalCard.css";
 const ProfessionalCard = ({
   name,
   profession,

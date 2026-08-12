@@ -1180,9 +1180,7 @@ button {
   .center-heading h2 {
     font-size: 30px;
   }
-}
-
-/* /* =========================
+}/* =========================
    MOBILE NAVBAR
 ========================= */
 
@@ -1205,7 +1203,7 @@ button {
     width: 100%;
   }
 
-  .navbar-container {
+  .navbar .navbar-container {
     width: 100%;
     min-height: 64px;
     padding: 10px 16px;
@@ -1217,39 +1215,45 @@ button {
   }
 
 
-  /* LOGO */
+  /* =========================
+     LOGO
+  ========================= */
 
-  .logo {
+  .navbar .logo {
     display: flex;
     align-items: center;
   }
 
-  .logo-text {
+  .navbar .logo-text {
     font-size: 16px;
     white-space: nowrap;
   }
 
-  .logo-icon {
+  .navbar .logo-icon {
     width: 38px;
     height: 38px;
     flex-shrink: 0;
   }
 
 
-  /* HIDE DESKTOP MENU */
+  /* =========================
+     HIDE DESKTOP MENU
+  ========================= */
 
-  .nav-links {
+  .navbar .nav-links {
     display: none;
   }
 
-  .nav-actions {
+  .navbar .nav-actions {
     display: none;
   }
 
 
-  /* HAMBURGER */
+  /* =========================
+     HAMBURGER
+  ========================= */
 
-  .mobile-menu-btn {
+  .navbar .mobile-menu-btn {
     display: flex;
 
     align-items: center;
@@ -1271,12 +1275,15 @@ button {
   }
 
 
-  /* MOBILE MENU */
+  /* =========================
+     MOBILE MENU
+  ========================= */
 
-  .mobile-menu {
+  .navbar .mobile-menu {
     display: none;
 
     width: 100%;
+
     padding: 15px 18px 20px;
 
     box-sizing: border-box;
@@ -1288,14 +1295,16 @@ button {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   }
 
-  .mobile-menu.active {
+  .navbar .mobile-menu.active {
     display: block;
   }
 
 
-  /* LINKS */
+  /* =========================
+     MOBILE LINKS
+  ========================= */
 
-  .mobile-menu > a {
+  .navbar .mobile-menu > a {
     display: block;
 
     padding: 14px 5px;
@@ -1310,35 +1319,46 @@ button {
     border-bottom: 1px solid #f1f1f1;
   }
 
-  .mobile-menu > a:hover {
+  .navbar .mobile-menu > a:hover {
     color: #b8860b;
   }
 
-/* MOBILE BUTTONS */
 
-.mobile-menu-actions {
-  display: flex !important;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 20px;
-}
+  /* =========================
+     MOBILE BUTTONS
+  ========================= */
 
-.mobile-menu-actions .login-btn,
-.mobile-menu-actions .register-btn {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  .navbar .mobile-menu-actions {
+    display: flex !important;
 
-  flex: 1;
-  width: 50%;
+    align-items: center;
 
-  padding: 12px 10px;
+    gap: 10px;
 
-  border-radius: 8px;
+    width: 100%;
 
-  font-size: 14px;
+    margin-top: 20px;
+  }
 
-  cursor: pointer;
-}
+  .navbar .mobile-menu-actions .login-btn,
+  .navbar .mobile-menu-actions .register-btn {
+    display: block !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    flex: 1;
+
+    width: 50%;
+
+    padding: 12px 10px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+  }
+
 }
