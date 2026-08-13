@@ -2,8 +2,9 @@ import "./Home.css";
 import Navbar from "../components/Navbar";
 import ProfessionalCard from "../components/ProfessionalCard";
 import Footer from "../components/Footer";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar />
@@ -74,7 +75,9 @@ const Home = () => {
                   📍 Delmas, Haïti
                 </div>
 
-                <button className="profile-btn">
+                <button className="profile-btn" 
+                onClick={() => navigate("/professional/jean-pierre")}
+                >
                   Gade pwofil
                 </button>
 
