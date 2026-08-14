@@ -1,0 +1,994 @@
+projet 
+*****************
+
+mwen vle yon app ak react sou visual studio.men app ounyen site saa la pou konekte kliyan ak teknisyen oubyen profesyonel nan yo domaine kelkonk
+1-lap pemet kliyan an anrejistre (nom konplet,phone ,adres paske recherch yo ap fet swivan zone li an)
+2-profesyonel oubyen teknisyen(nom ,siyati,phone,date nesans,adresse,sal ye an tankou eske se plonbye,pent,mekanisyen,infimye,......)
+3-fok li gen menu ,wap imajine pou mw,pied page normal,mwen vle yon site profesyonel
+
+
+Wi. Men yon dokiman rezime pwojè **Pwofesyonèl Lakay** la, ak sa nou deja fè, estrikti fichye yo, fonksyon yo, ak sa ki rete pou nou fè. Sa ap sèvi kòm referans pou nou pa kraze ansyen kòd yo lè n ap ajoute nouvo fonksyon.
+
+# PWOJÈ PWOFESYONÈL LAKAY
+
+## 1. Objektif pwojè a
+
+**Pwofesyonèl Lakay** se yon platfòm React/Vite ki fèt pou konekte kliyan ak pwofesyonèl/teknisyen selon:
+
+* Sèvis yo bezwen
+* Zòn kote yo ye
+* Metye pwofesyonèl la
+* Eksperyans
+* Evalyasyon/review
+* Disponibilite
+
+Objektif la se fè kliyan jwenn yon pwofesyonèl serye pi fasil, rapid epi san tèt chaje.
+
+---
+
+# 2. Teknoloji nou itilize
+
+Pwojè a itilize:
+
+* React
+* Vite
+* JavaScript
+* React Router
+* CSS
+* VS Code
+* Git/GitHub
+* Netlify pou deployment
+
+---
+
+# 3. Style vizyèl
+
+Koulè prensipal pwojè a:
+
+* Cream / Beige
+* Coffee Brown
+* Green/Olive pou eleman aksyon ak verifikasyon
+* Blan pou cards ak fenèt yo
+
+Style la dwe rete:
+
+* Elegant
+* Pwofesyonèl
+* Modèn
+* Senp
+* Fasil pou itilize
+
+Navbar la fèt pou li pi gwo epi pi vizib.
+
+---
+
+# 4. Estrikti jeneral pwojè a
+
+Estrikti nou genyen an sanble ak:
+
+```text
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Navbar.css
+│   ├── Footer.jsx
+│   ├── ProfessionalCard.jsx
+│   ├── LoginModal.jsx
+│   ├── RegisterModal.jsx
+│   ├── IdentityVerification.jsx
+│   └── IdentityVerification.css
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Home.css
+│   ├── Professionals.jsx
+│   ├── Categories.jsx
+│   ├── About.jsx
+│   ├── Contact.jsx
+│   ├── ProfessionalProfile.jsx
+│   ├── ProfessionalContact.jsx
+│   ├── ProfessionalSetup.jsx
+│   └── ProfessionalSetup.css
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+# 5. Navbar
+
+Navbar la genyen:
+
+### Menu
+
+* Akèy
+* Pwofesyonèl
+* Kategori
+* Sou nou
+* Kontak
+
+### Bouton
+
+* Konekte
+* Enskri
+
+Bouton **Enskri** nan Navbar la se pou tout moun.
+
+Sa vle di:
+
+> Kliyan ak pwofesyonèl dwe kapab kreye kont sou sit la.
+
+---
+
+# 6. RegisterModal
+
+Nou genyen:
+
+```text
+RegisterModal.jsx
+RegisterModal.css
+```
+
+Modal la genyen:
+
+* Non konplè
+* Email
+* Telefòn
+* Modpas
+* Konfime modpas
+* Akseptasyon kondisyon yo
+* Bouton Kreye kont
+* Bouton Konekte
+
+Lè itilizatè a soumèt form lan, li montre:
+
+**"Kont ou an kreye ak siksè!"**
+
+Nou retire lide pou itilizatè a ale dirèkteman nan:
+
+```text
+Kontinye konfigirasyon
+```
+
+apre kreye kont.
+
+Rezon an:
+
+Kliyan ak pwofesyonèl dwe premye gen yon kont jeneral.
+
+---
+
+# 7. Diferans ant Enskri ak Enskri kòm pwofesyonèl
+
+Sa se yon pati enpòtan nan lojik pwojè a.
+
+## Enskri
+
+Bouton:
+
+```text
+Enskri
+```
+
+nan Navbar la se pou tout moun.
+
+Li kreye kont jeneral.
+
+---
+
+## Enskri kòm pwofesyonèl
+
+Bouton sa a nan Home page la se pou moun ki vle vin pwofesyonèl.
+
+Li pa dwe mande itilizatè a kreye yon lòt kont ankò.
+
+Li dwe mennen itilizatè a nan etap pwofesyonèl la.
+
+Workflow la se:
+
+```text
+Home
+ ↓
+Enskri kòm pwofesyonèl
+ ↓
+ProfessionalSetup
+ ↓
+Enfòmasyon pèsonèl
+ ↓
+Enfòmasyon pwofesyonèl
+ ↓
+Verifikasyon dokiman
+ ↓
+Verifikasyon vizaj
+ ↓
+Soumèt pou verifikasyon
+```
+
+---
+
+# 8. Home.jsx
+
+Home page la genyen:
+
+## Hero
+
+Tit:
+
+```text
+Jwenn bon pwofesyonèl la
+toupre lakay ou.
+```
+
+Deskripsyon sou sèvis Pwofesyonèl Lakay.
+
+Bouton:
+
+```text
+Jwenn yon pwofesyonèl
+```
+
+Bouton sa a mennen:
+
+```text
+/professionals
+```
+
+---
+
+## Dezyèm bouton Hero
+
+Nou te chanje lide sou bouton:
+
+```text
+Mwen se yon pwofesyonèl
+```
+
+Li vin:
+
+```text
+Eksplore kategori
+```
+
+epi li mennen:
+
+```text
+/categories
+```
+
+Pou kounye a, nou vle kenbe aksyon sa a senp.
+
+---
+
+# 9. Bouton Enskri kòm pwofesyonèl
+
+Nan Home page la, nou gen yon bouton pou moun ki vle vin pwofesyonèl.
+
+Sa a diferan ak bouton Navbar:
+
+```text
+Enskri
+```
+
+Bouton pwofesyonèl la dwe lanse workflow pwofesyonèl la.
+
+Li pa dwe montre RegisterModal tankou yon moun ki poko konnen sit la.
+
+Li dwe konsidere ke itilizatè a pral bezwen yon kont epi apre sa ranpli enfòmasyon pwofesyonèl li.
+
+---
+
+# 10. Search section
+
+Home page la genyen yon rechèch:
+
+```text
+JWENN YON PWOFESYONÈL
+
+Ki sèvis ou bezwen?
+```
+
+Li genyen:
+
+### Sèvis
+
+```text
+Tape sèvis ou bezwen...
+```
+
+### Zòn
+
+```text
+Tape zòn ou...
+```
+
+### Bouton
+
+```text
+🔍 Chèche
+```
+
+Pou kounye a bouton an mennen:
+
+```text
+/professionals
+```
+
+Nan lavni, rechèch la dwe vin reyèl:
+
+```text
+Sèvis + Zòn
+       ↓
+Filtre pwofesyonèl
+       ↓
+Rezilta
+```
+
+---
+
+# 11. Categories
+
+Kategori ki deja parèt sou Home:
+
+* Plonbye
+* Elektrisyen
+* Mekanisyen
+* Pent
+* Mason
+* Enfòmatik
+
+Chak kategori montre kantite pwofesyonèl.
+
+Bouton:
+
+```text
+Gade tout →
+```
+
+mennen:
+
+```text
+/categories
+```
+
+---
+
+# 12. Professional Cards
+
+Home page la genyen pwofesyonèl rekòmande.
+
+Egzanp:
+
+### Jean Pierre
+
+* Elektrisyen
+* Delmas
+* Rating 4.9
+
+### Marie Louis
+
+* Plonbye
+* Pétion-Ville
+* Rating 4.8
+
+### Paul Joseph
+
+* Mekanisyen
+* Carrefour
+* Rating 4.9
+
+---
+
+# 13. Professional Profile
+
+Nou genyen route pou pwofil pwofesyonèl.
+
+Egzanp:
+
+```text
+/professional/jean-pierre
+```
+
+Li ka montre:
+
+* Non
+* Metye
+* Zòn
+* Rating
+* Eksperyans
+* Deskripsyon
+* Kontak
+
+---
+
+# 14. Professional Contact
+
+Nou genyen yon paj:
+
+```text
+ProfessionalContact.jsx
+```
+
+Li fèt pou pèmèt kliyan kontakte pwofesyonèl la.
+
+---
+
+# 15. ProfessionalSetup
+
+Nou genyen:
+
+```text
+pages/ProfessionalSetup.jsx
+pages/ProfessionalSetup.css
+```
+
+Sa a se paj prensipal konfigirasyon pwofesyonèl la.
+
+Li gen 4 pati.
+
+---
+
+# 16. ProfessionalSetup — Pati 01
+
+## Enfòmasyon pèsonèl
+
+Li genyen:
+
+* Prenon
+* Non
+* Dat nesans
+* Telefòn / WhatsApp
+
+Nou te retire lide pou itilizatè a senpleman upload yon foto vizaj.
+
+Verifikasyon vizaj la pral fèt avèk kamera.
+
+---
+
+# 17. ProfessionalSetup — Pati 02
+
+## Enfòmasyon pwofesyonèl
+
+Li genyen:
+
+### Metye
+
+* Elektrisyen
+* Plonbye
+* Mekanisyen
+* Mason
+* Pent
+* Enfòmatik
+* Lòt
+
+### Ane eksperyans
+
+* Mwens pase 1 ane
+* 1 - 3 ane
+* 4 - 7 ane
+* 8 - 10 ane
+* Plis pase 10 ane
+
+### Zòn sèvis
+
+Egzanp:
+
+```text
+Delmas
+```
+
+### Sèvis ou ofri
+
+Egzanp:
+
+```text
+Enstalasyon elektrik
+```
+
+### Deskripsyon pwofesyonèl
+
+Yon textarea kote pwofesyonèl la prezante tèt li ak eksperyans li.
+
+---
+
+# 18. ProfessionalSetup — Pati 03
+
+## Verifikasyon idantite
+
+Nou te vle fè pati sa a plis pwofesyonèl.
+
+Premye etap la:
+
+```text
+01 — Chwazi pyès ou an
+```
+
+Dokiman ki disponib:
+
+```text
+NIF
+NINU
+Paspò
+```
+
+Apre itilizatè a chwazi dokiman an, nou montre:
+
+```text
+02 — Eskane pyès idantite ou an
+```
+
+Objektif la se pa mete sèlman:
+
+```text
+Choose File
+```
+
+Nou vle ouvri kamera aparèy la pou itilizatè a ka pran foto pyès idantite a.
+
+---
+
+# 19. IdentityVerification
+
+Nou deja kreye yon component:
+
+```text
+src/components/IdentityVerification.jsx
+```
+
+ak CSS:
+
+```text
+src/components/IdentityVerification.css
+```
+
+Li sèvi pou verifikasyon vizaj.
+
+Li itilize kamera aparèy la.
+
+Objektif la se:
+
+```text
+Louvri kamera
+      ↓
+Kamera montre vizaj moun nan
+      ↓
+Moun nan pozisyone vizaj li
+      ↓
+Pran snapshot
+      ↓
+Konfime
+```
+
+Sa a pi bon pase yon senp:
+
+```text
+Upload profile picture
+```
+
+---
+
+# 20. ProfessionalSetup — Pati 04
+
+## Verifikasyon vizaj
+
+Pati sa a rele:
+
+```text
+04
+Verifikasyon vizaj
+```
+
+Li gen:
+
+```text
+Sèvi ak kamera aparèy ou pou verifye
+vizaj ou.
+```
+
+epi li itilize:
+
+```jsx
+<IdentityVerification />
+```
+
+Se component sa a ki responsab kamera vizaj la.
+
+---
+
+# 21. Submit
+
+Nan fen ProfessionalSetup la genyen:
+
+```text
+Soumèt pwofil pou verifikasyon →
+```
+
+Lè itilizatè a soumèt form lan, pou kounye a nou montre yon mesaj tankou:
+
+```text
+Pwofil pwofesyonèl ou an soumèt ak siksè!
+```
+
+Nan lavni sa ap vin yon vrè workflow backend.
+
+---
+
+# 22. Routes
+
+Routes prensipal yo gen ladan:
+
+```text
+/
+```
+
+Home
+
+```text
+/professionals
+```
+
+Lis pwofesyonèl yo
+
+```text
+/categories
+```
+
+Kategori yo
+
+```text
+/about
+```
+
+Sou nou
+
+```text
+/contact
+```
+
+Kontak
+
+```text
+/professional/jean-pierre
+```
+
+Pwofil Jean Pierre
+
+```text
+/professional/jean-pierre/contact
+```
+
+Kontakte Jean Pierre
+
+```text
+/professional-setup
+```
+
+Konfigirasyon pwofesyonèl
+
+---
+
+# 23. Bagay nou pa dwe kraze
+
+Lè n ap modifye pwojè a, nou dwe evite efase:
+
+```text
+Navbar
+RegisterModal
+LoginModal
+ProfessionalCard
+ProfessionalProfile
+ProfessionalContact
+ProfessionalSetup
+IdentityVerification
+Footer
+```
+
+Nou dwe modifye sèlman pati ki nesesè.
+
+Pa ranplase tout Home.jsx si se yon sèl bouton nou bezwen chanje.
+
+Pa ajoute yon import pou yon component ki pa egziste.
+
+Egzanp erè nou te jwenn:
+
+```text
+Failed to resolve import "../components/DocumentScanner"
+```
+
+Sa te rive paske:
+
+```text
+DocumentScanner.jsx
+```
+
+pa t egziste.
+
+Se poutèt sa, anvan nou ajoute:
+
+```jsx
+import Something from "../components/Something";
+```
+
+nou dwe verifye fichye a egziste.
+
+---
+
+# 24. Workflow aktyèl pwojè a
+
+Workflow jeneral la dwe vin:
+
+```text
+                    PWOFESYONÈL LAKAY
+                           │
+              ┌────────────┴────────────┐
+              │                         │
+           KLIYAN                  PWOFESYONÈL
+              │                         │
+           Enskri                    Enskri
+              │                         │
+         Kreye kont               Kreye kont
+              │                         │
+          Konekte                  Enskri kòm
+                                  pwofesyonèl
+                                       │
+                              ProfessionalSetup
+                                       │
+                              Enfòmasyon pèsonèl
+                                       │
+                           Enfòmasyon pwofesyonèl
+                                       │
+                              Dokiman idantite
+                                       │
+                              Scanner kamera
+                                       │
+                              Verifikasyon vizaj
+                                       │
+                              Soumèt pou verifye
+```
+
+---
+
+# 25. Sa ki poko vrèman backend
+
+Pou kounye a, aplikasyon an se sitou frontend.
+
+Sa vle di enfòmasyon tankou:
+
+* Non
+* Email
+* Telefòn
+* Modpas
+* Dokiman
+* Foto kamera
+* Verifikasyon
+* Pwofil pwofesyonèl
+
+poko antre nan yon bazdone reyèl.
+
+Pou fè sa tounen yon aplikasyon reyèl, pwochen gwo etap yo pral:
+
+```text
+Frontend
+   ↓
+Backend/API
+   ↓
+Database
+   ↓
+Authentication
+   ↓
+File Storage
+```
+
+---
+
+# 26. Bazdone ki pral nesesè pita
+
+Nou kapab gen tab tankou:
+
+### Users
+
+```text
+id
+name
+email
+phone
+password
+role
+created_at
+```
+
+Role yo kapab:
+
+```text
+client
+professional
+admin
+```
+
+### Professional Profiles
+
+```text
+id
+user_id
+profession
+experience
+service_area
+services
+description
+status
+created_at
+```
+
+### Identity Verification
+
+```text
+id
+user_id
+document_type
+document_number
+document_image
+face_verification
+verification_status
+created_at
+```
+
+### Services
+
+```text
+id
+name
+description
+```
+
+### Reviews
+
+```text
+id
+client_id
+professional_id
+rating
+comment
+created_at
+```
+
+---
+
+# 27. Pwochen gwo etap yo
+
+Nou kapab kontinye nan lòd sa a:
+
+## Etap 1
+
+Fini kamera scanner dokiman an.
+
+## Etap 2
+
+Fini kamera verifikasyon vizaj la.
+
+## Etap 3
+
+Fè bouton:
+
+```text
+Soumèt pwofil pou verifikasyon
+```
+
+montre yon bon mesaj/success screen.
+
+## Etap 4
+
+Ajoute Login reyèl.
+
+## Etap 5
+
+Ajoute database.
+
+## Etap 6
+
+Ajoute authentication.
+
+## Etap 7
+
+Sove pwofil pwofesyonèl yo.
+
+## Etap 8
+
+Fè pwofesyonèl yo parèt otomatikman nan:
+
+```text
+/professionals
+```
+
+## Etap 9
+
+Fè search sèvis + zòn lan mache.
+
+## Etap 10
+
+Ajoute admin verification pou pwofesyonèl yo.
+
+---
+
+# 28. Règ pou pwochen modifikasyon yo
+
+Pou evite erè:
+
+### 1. Pa efase ansyen component yo san nesesite.
+
+### 2. Pa kreye nouvo import si component la poko egziste.
+
+### 3. Lè yon sèl pati bezwen modifye, modifye sèlman pati sa a.
+
+### 4. Kenbe CSS chak component/page apa.
+
+### 5. Anvan nou ajoute route, verifye page/component la egziste.
+
+### 6. Apre chak gwo chanjman:
+
+```bash
+npm run dev
+```
+
+epi teste navigasyon an.
+
+### 7. Lè tout bagay mache:
+
+```bash
+git add .
+git commit -m "update project"
+git push
+```
+
+Netlify ap pran nouvo chanjman yo depi repository GitHub la konekte.
+
+---
+
+# 29. Eta pwojè a
+
+Kounye a pwojè a deja genyen yon bon fondasyon:
+
+* Home page
+* Navbar
+* Login modal
+* Register modal
+* Categories
+* Professionals
+* Professional profile
+* Professional contact
+* Professional setup
+* Identity verification
+* Camera-based face verification
+* Responsive CSS
+* React Router
+* GitHub
+* Netlify deployment
+
+Pi gwo travay ki rete se konekte frontend lan ak yon **backend + database + authentication + storage**, pou aplikasyon an pa sèlman yon demo men yon platfòm reyèl.
+
+---
+
+# 30. Prensip nou pral suiv
+
+**Nou pa pral kraze sa ki deja mache.**
+
+Lè w mande:
+
+> "Ajoute kamera nan pati dokiman an"
+
+nou pral modifye sèlman pati scanner dokiman an.
+
+Lè w mande:
+
+> "Chanje bouton an"
+
+nou pa pral refè tout Home.jsx.
+
+Lè w mande:
+
+> "Ajoute database"
+
+nou pral ajoute database san nou pa retire components ki deja fèt.
+
+Pwojè a dwe grandi etap pa etap.

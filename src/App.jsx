@@ -9,7 +9,7 @@ import Contact from "./pages/Contact";
 import ProfessionalProfile from "./pages/ProfessionalProfile";
 import ProfessionalContact from "./pages/ProfessionalContact";
 import ProfessionalSetup from "./pages/ProfessionalSetup";
-
+import IdentityVerification from "./components/IdentityVerification";
 function App() {
   return (
     <BrowserRouter>
@@ -51,7 +51,12 @@ function App() {
 <Route
   path="/professional-setup"
   element={<ProfessionalSetup />}
-/>v
+/>
+
+<Route
+  path="/identity-verification"
+  element={<IdentityVerification />}
+/>
       </Routes>
     </BrowserRouter>
   );

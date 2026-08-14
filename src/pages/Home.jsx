@@ -13,8 +13,12 @@ const Home = () => {
 
       <main className="home">
 
-        {/* HERO SECTION */}
+        {/* =========================================
+            HERO SECTION
+        ========================================= */}
+
         <section className="hero">
+
           <div className="hero-container">
 
             <div className="hero-content">
@@ -38,6 +42,8 @@ const Home = () => {
 
               <div className="hero-buttons">
 
+                {/* JWENN YON PWOFESYONÈL */}
+
                 <button
                   className="primary-btn"
                   onClick={() => navigate("/professionals")}
@@ -45,11 +51,14 @@ const Home = () => {
                   Jwenn yon pwofesyonèl
                 </button>
 
+
+                {/* ENSKRI KÒM PWOFESYONÈL */}
+
                 <button
                   className="secondary-btn"
-                  onClick={() => navigate("/categories")}
+                  onClick={() => navigate("/professional-setup")}
                 >
-                  Eksplore kategori
+                  Enskri kòm pwofesyonèl
                 </button>
 
               </div>
@@ -57,32 +66,53 @@ const Home = () => {
             </div>
 
 
-            {/* HERO PROFESSIONAL CARD */}
+            {/* =========================================
+                HERO PROFESSIONAL CARD
+            ========================================= */}
+
             <div className="hero-visual">
 
               <div className="hero-card">
 
                 <div className="hero-card-top">
+
                   <span className="status-dot"></span>
+
                   Disponib kounye a
+
                 </div>
+
 
                 <div className="professional-avatar">
                   👨🏾‍🔧
                 </div>
 
-                <h3>Jean Pierre</h3>
 
-                <p>Elektrisyen</p>
+                <h3>
+                  Jean Pierre
+                </h3>
+
+
+                <p>
+                  Elektrisyen
+                </p>
+
 
                 <div className="rating">
+
                   ★★★★★
-                  <span>4.9</span>
+
+                  <span>
+                    4.9
+                  </span>
+
                 </div>
+
 
                 <div className="location">
                   📍 Delmas, Haïti
                 </div>
+
 
                 <button
                   className="profile-btn"
@@ -98,17 +128,23 @@ const Home = () => {
             </div>
 
           </div>
+
         </section>
 
 
-        {/* SEARCH SECTION */}
+        {/* =========================================
+            SEARCH SECTION
+        ========================================= */}
+
         <section className="search-section">
 
           <div className="search-container">
 
             <div className="search-heading">
 
-              <span>JWENN YON PWOFESYONÈL</span>
+              <span>
+                JWENN YON PWOFESYONÈL
+              </span>
 
               <h2>
                 Ki sèvis ou bezwen?
@@ -125,6 +161,7 @@ const Home = () => {
             <div className="search-box">
 
               {/* SERVICE */}
+
               <div className="search-field">
 
                 <span className="search-icon">
@@ -132,12 +169,16 @@ const Home = () => {
                 </span>
 
                 <div>
-                  <small>Sèvis</small>
+
+                  <small>
+                    Sèvis
+                  </small>
 
                   <input
                     type="text"
                     placeholder="Tape sèvis ou bezwen..."
                   />
+
                 </div>
 
               </div>
@@ -147,6 +188,7 @@ const Home = () => {
 
 
               {/* LOCATION */}
+
               <div className="search-field">
 
                 <span className="search-icon">
@@ -154,16 +196,22 @@ const Home = () => {
                 </span>
 
                 <div>
-                  <small>Zòn</small>
+
+                  <small>
+                    Zòn
+                  </small>
 
                   <input
                     type="text"
                     placeholder="Tape zòn ou..."
                   />
+
                 </div>
 
               </div>
 
+
+              {/* SEARCH BUTTON */}
 
               <button
                 className="search-btn"
@@ -179,7 +227,10 @@ const Home = () => {
         </section>
 
 
-        {/* CATEGORIES SECTION */}
+        {/* =========================================
+            CATEGORIES SECTION
+        ========================================= */}
+
         <section className="categories-section">
 
           <div className="section-container">
@@ -210,6 +261,7 @@ const Home = () => {
 
 
             <div className="categories-grid">
+
 
               <div className="category-card">
 
@@ -319,7 +371,10 @@ const Home = () => {
         </section>
 
 
-        {/* PROFESSIONALS SECTION */}
+        {/* =========================================
+            PROFESSIONALS SECTION
+        ========================================= */}
+
         <section className="professionals-section">
 
           <div className="section-container">
@@ -350,6 +405,7 @@ const Home = () => {
 
 
             <div className="professionals-grid">
+
 
               <ProfessionalCard
                 name="Jean Pierre"
@@ -384,7 +440,10 @@ const Home = () => {
         </section>
 
 
-        {/* HOW IT WORKS */}
+        {/* =========================================
+            HOW IT WORKS
+        ========================================= */}
+
         <section className="how-section">
 
           <div className="section-container">
@@ -408,6 +467,7 @@ const Home = () => {
 
 
             <div className="steps">
+
 
               <div className="step">
 
@@ -469,6 +529,7 @@ const Home = () => {
         </section>
 
       </main>
+
 
       <Footer />
 

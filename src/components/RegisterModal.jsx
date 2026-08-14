@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./RegisterModal.css";
 
 const RegisterModal = ({
@@ -9,8 +8,6 @@ const RegisterModal = ({
 }) => {
 
   const [accountCreated, setAccountCreated] = useState(false);
-
-  const navigate = useNavigate();
 
   if (!isOpen) {
     return null;
@@ -22,15 +19,15 @@ const RegisterModal = ({
     setAccountCreated(true);
   };
 
-  const handleContinue = () => {
+  const handleClose = () => {
+    setAccountCreated(false);
     onClose();
-    navigate("/professional-setup");
   };
 
   return (
     <div
       className="register-modal-overlay"
-      onClick={onClose}
+      onClick={handleClose}
     >
 
       <div
@@ -42,7 +39,7 @@ const RegisterModal = ({
 
         <button
           className="register-modal-close"
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Fèmen"
         >
           ×
@@ -67,16 +64,15 @@ const RegisterModal = ({
 
             <p>
               Mèsi paske ou chwazi Pwofesyonèl Lakay.
-              Kont ou pare. Kounye a ou ka kontinye
-              konfigirasyon pwofil ou.
+              Kont ou pare avèk siksè.
             </p>
 
             <button
               type="button"
               className="continue-setup-btn"
-              onClick={handleContinue}
+              onClick={handleClose}
             >
-              Kontinye konfigirasyon →
+              Fèmen
             </button>
 
           </div>
@@ -84,9 +80,8 @@ const RegisterModal = ({
         ) : (
 
           <>
-            {/* ================================
-                HEADER
-            ================================= */}
+
+            {/* HEADER */}
 
             <div className="register-modal-header">
 
@@ -105,9 +100,7 @@ const RegisterModal = ({
             </div>
 
 
-            {/* ================================
-                FORM
-            ================================= */}
+            {/* FORM */}
 
             <form
               className="register-form"
@@ -233,9 +226,7 @@ const RegisterModal = ({
             </form>
 
 
-            {/* ================================
-                LOGIN
-            ================================= */}
+            {/* LOGIN */}
 
             <div className="register-login">
 

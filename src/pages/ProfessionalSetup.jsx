@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import IdentityVerification from "../components/IdentityVerification";
 import "./ProfessionalSetup.css";
 
 const ProfessionalSetup = () => {
@@ -18,18 +19,28 @@ const ProfessionalSetup = () => {
 
       <div className="setup-container">
 
+        {/* BACK BUTTON */}
+
         <button
           className="setup-back"
+          type="button"
           onClick={() => navigate("/")}
         >
           ← Retounen
         </button>
 
+
+        {/* HEADER */}
+
         <div className="setup-header">
 
-          <span>KONFIGIRASYON PWOFESYONÈL</span>
+          <span>
+            KONFIGIRASYON PWOFESYONÈL
+          </span>
 
-          <h1>Konplete pwofil ou</h1>
+          <h1>
+            Konplete pwofil ou
+          </h1>
 
           <p>
             Bay kèk enfòmasyon sou ou ak sèvis ou yo
@@ -38,73 +49,109 @@ const ProfessionalSetup = () => {
 
         </div>
 
+
+        {/* FORM */}
+
         <form
           className="setup-form"
           onSubmit={handleSubmit}
         >
 
-          {/* ENFÒMASYON PÈSONÈL */}
+          {/* =====================================
+              01 — ENFÒMASYON PÈSONÈL
+          ====================================== */}
 
           <section className="setup-section">
 
             <div className="setup-section-title">
+
               <span>01</span>
 
               <div>
-                <h2>Enfòmasyon pèsonèl</h2>
+
+                <h2>
+                  Enfòmasyon pèsonèl
+                </h2>
 
                 <p>
                   Enfòmasyon sa yo ap ede kliyan yo idantifye ou.
                 </p>
+
               </div>
+
             </div>
+
 
             <div className="setup-grid">
 
               <div className="setup-field">
-                <label>Prenon</label>
+
+                <label>
+                  Prenon
+                </label>
 
                 <input
                   type="text"
                   placeholder="Egzanp: Jean"
                   required
                 />
+
               </div>
 
+
               <div className="setup-field">
-                <label>Non</label>
+
+                <label>
+                  Non
+                </label>
 
                 <input
                   type="text"
                   placeholder="Egzanp: Pierre"
                   required
                 />
+
               </div>
 
+
               <div className="setup-field">
-                <label>Dat nesans</label>
+
+                <label>
+                  Dat nesans
+                </label>
 
                 <input
                   type="date"
                   required
                 />
+
               </div>
 
+
               <div className="setup-field">
-                <label>Telefòn / WhatsApp</label>
+
+                <label>
+                  Telefòn / WhatsApp
+                </label>
 
                 <input
                   type="tel"
                   placeholder="+509..."
                   required
                 />
+
               </div>
 
             </div>
 
+
+            {/* FOTO PWOFIL */}
+
             <div className="setup-field">
 
-              <label>Foto pwofil</label>
+              <label>
+                Foto pwofil
+              </label>
 
               <input
                 type="file"
@@ -116,27 +163,40 @@ const ProfessionalSetup = () => {
           </section>
 
 
-          {/* ENFÒMASYON PWOFESYONÈL */}
+          {/* =====================================
+              02 — ENFÒMASYON PWOFESYONÈL
+          ====================================== */}
 
           <section className="setup-section">
 
             <div className="setup-section-title">
+
               <span>02</span>
 
               <div>
-                <h2>Enfòmasyon pwofesyonèl</h2>
+
+                <h2>
+                  Enfòmasyon pwofesyonèl
+                </h2>
 
                 <p>
                   Di kliyan yo ki sèvis ou ofri.
                 </p>
+
               </div>
+
             </div>
+
 
             <div className="setup-grid">
 
+              {/* METYE */}
+
               <div className="setup-field">
 
-                <label>Metye</label>
+                <label>
+                  Metye
+                </label>
 
                 <select required>
 
@@ -144,22 +204,46 @@ const ProfessionalSetup = () => {
                     Chwazi metye ou
                   </option>
 
-                  <option>Elektrisyen</option>
-                  <option>Plonbye</option>
-                  <option>Mekanisyen</option>
-                  <option>Mason</option>
-                  <option>Pent</option>
-                  <option>Enfòmatik</option>
-                  <option>Lòt</option>
+                  <option>
+                    Elektrisyen
+                  </option>
+
+                  <option>
+                    Plonbye
+                  </option>
+
+                  <option>
+                    Mekanisyen
+                  </option>
+
+                  <option>
+                    Mason
+                  </option>
+
+                  <option>
+                    Pent
+                  </option>
+
+                  <option>
+                    Enfòmatik
+                  </option>
+
+                  <option>
+                    Lòt
+                  </option>
 
                 </select>
 
               </div>
 
 
+              {/* EXPERYANS */}
+
               <div className="setup-field">
 
-                <label>Ane eksperyans</label>
+                <label>
+                  Ane eksperyans
+                </label>
 
                 <select required>
 
@@ -167,20 +251,38 @@ const ProfessionalSetup = () => {
                     Chwazi
                   </option>
 
-                  <option>MWens pase 1 ane</option>
-                  <option>1 - 3 ane</option>
-                  <option>4 - 7 ane</option>
-                  <option>8 - 10 ane</option>
-                  <option>Plis pase 10 ane</option>
+                  <option>
+                    Mwens pase 1 ane
+                  </option>
+
+                  <option>
+                    1 - 3 ane
+                  </option>
+
+                  <option>
+                    4 - 7 ane
+                  </option>
+
+                  <option>
+                    8 - 10 ane
+                  </option>
+
+                  <option>
+                    Plis pase 10 ane
+                  </option>
 
                 </select>
 
               </div>
 
 
+              {/* ZÒN */}
+
               <div className="setup-field">
 
-                <label>Zòn sèvis</label>
+                <label>
+                  Zòn sèvis
+                </label>
 
                 <input
                   type="text"
@@ -191,9 +293,13 @@ const ProfessionalSetup = () => {
               </div>
 
 
+              {/* SÈVIS */}
+
               <div className="setup-field">
 
-                <label>Sèvis ou ofri</label>
+                <label>
+                  Sèvis ou ofri
+                </label>
 
                 <input
                   type="text"
@@ -206,9 +312,13 @@ const ProfessionalSetup = () => {
             </div>
 
 
+            {/* DESKRIPSYON */}
+
             <div className="setup-field">
 
-              <label>Deskripsyon pwofesyonèl</label>
+              <label>
+                Deskripsyon pwofesyonèl
+              </label>
 
               <textarea
                 rows="5"
@@ -221,7 +331,9 @@ const ProfessionalSetup = () => {
           </section>
 
 
-          {/* VERIFIKASYON */}
+          {/* =====================================
+              03 — VERIFIKASYON DOKIMAN
+          ====================================== */}
 
           <section className="setup-section">
 
@@ -230,19 +342,28 @@ const ProfessionalSetup = () => {
               <span>03</span>
 
               <div>
-                <h2>Verifikasyon idantite</h2>
+
+                <h2>
+                  Verifikasyon idantite
+                </h2>
 
                 <p>
-                  Enfòmasyon sa yo rete prive.
+                  Chwazi yon dokiman epi bay enfòmasyon
+                  ki nesesè pou verifye idantite ou.
                 </p>
+
               </div>
 
             </div>
 
 
+            {/* DOCUMENT TYPE */}
+
             <div className="setup-field">
 
-              <label>Kalite dokiman</label>
+              <label>
+                Kalite dokiman
+              </label>
 
               <div className="document-options">
 
@@ -258,6 +379,7 @@ const ProfessionalSetup = () => {
                   NIF
                 </button>
 
+
                 <button
                   type="button"
                   className={
@@ -269,6 +391,7 @@ const ProfessionalSetup = () => {
                 >
                   NINU
                 </button>
+
 
                 <button
                   type="button"
@@ -287,6 +410,8 @@ const ProfessionalSetup = () => {
             </div>
 
 
+            {/* DOCUMENT NUMBER */}
+
             <div className="setup-field">
 
               <label>
@@ -302,22 +427,58 @@ const ProfessionalSetup = () => {
             </div>
 
 
+            {/* DOCUMENT SCAN */}
+
             <div className="setup-field">
 
-              <label>Dokiman idantite</label>
+              <label>
+                Eskane pyès idantite ou an
+              </label>
 
-              <input
-                type="file"
-                accept=".pdf,.jpg,.jpeg,.png"
-                required
-              />
+              <p className="verification-description">
+                Louvri kamera a pou pran yon foto klè devan pyès
+                idantite ou.
+              </p>
 
             </div>
 
           </section>
 
 
-          {/* SUBMIT */}
+          {/* =====================================
+              04 — VERIFIKASYON VIZAJ
+          ====================================== */}
+
+          <section className="setup-section">
+
+            <div className="setup-section-title">
+
+              <span>04</span>
+
+              <div>
+
+                <h2>
+                  Verifikasyon vizaj
+                </h2>
+
+                <p>
+                  Sèvi ak kamera aparèy ou pou verifye
+                  vizaj ou.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <IdentityVerification />
+
+          </section>
+
+
+          {/* =====================================
+              SUBMIT
+          ====================================== */}
 
           <div className="setup-submit-area">
 

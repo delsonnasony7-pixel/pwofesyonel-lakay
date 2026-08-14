@@ -5,7 +5,7 @@ import "./Navbar.css";
 import LoginModal from "./LoginModal";
 import RegisterModal from "./RegisterModal";
 
-const Navbar = () => {
+const Navbar = ({ onRegisterClick }) => {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +20,18 @@ const Navbar = () => {
     setShowLogin(false);
     setShowRegister(true);
     setMenuOpen(false);
+
+    if (onRegisterClick) {
+      onRegisterClick();
+    }
+  };
+
+  const closeRegister = () => {
+    setShowRegister(false);
+
+    if (onRegisterClick) {
+      onRegisterClick(false);
+    }
   };
 
   const closeMenu = () => {
@@ -33,7 +45,11 @@ const Navbar = () => {
         <div className="navbar-container">
 
           {/* LOGO */}
-          <Link to="/" className="logo" onClick={closeMenu}>
+          <Link
+            to="/"
+            className="logo"
+            onClick={closeMenu}
+          >
             <span className="logo-icon">
               PL
             </span>
@@ -47,7 +63,9 @@ const Navbar = () => {
           {/* DESKTOP MENU */}
           <nav className="nav-links">
 
-            <Link to="/">Akèy</Link>
+            <Link to="/">
+              Akèy
+            </Link>
 
             <Link to="/professionals">
               Pwofesyonèl
@@ -101,9 +119,16 @@ const Navbar = () => {
 
 
         {/* MOBILE MENU */}
-        <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+        <div
+          className={`mobile-menu ${
+            menuOpen ? "active" : ""
+          }`}
+        >
 
-          <Link to="/" onClick={closeMenu}>
+          <Link
+            to="/"
+            onClick={closeMenu}
+          >
             Akèy
           </Link>
 
@@ -171,7 +196,7 @@ const Navbar = () => {
       {/* REGISTER MODAL */}
       <RegisterModal
         isOpen={showRegister}
-        onClose={() => setShowRegister(false)}
+        onClose={closeRegister}
         onSwitchToLogin={openLogin}
       />
 

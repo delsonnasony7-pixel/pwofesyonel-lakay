@@ -1,0 +1,553 @@
+/* =========================================
+   IDENTITY VERIFICATION
+========================================= */
+
+.identity-verification {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* =========================================
+   VERIFICATION CARD
+========================================= */
+
+.verification-card {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 28px;
+
+  background: #fffdf9;
+
+  border: 1px solid #e5dbcf;
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 25px rgba(70, 48, 32, 0.05);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.verification-title {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+
+.verification-number {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #e8eee5;
+
+  color: #63725d;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+.verification-title h3 {
+  margin: 0 0 6px;
+
+  color: #3d281b;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+
+.verification-title p {
+  margin: 0;
+
+  color: #89786b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CAMERA BUTTON
+========================================= */
+
+.verification-camera-btn {
+  width: 100%;
+
+  padding: 15px 20px;
+
+  border: 1px dashed #b9aa9b;
+  border-radius: 11px;
+
+  background: #faf7f2;
+
+  color: #5b402e;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.verification-camera-btn:hover {
+  border-color: #71806a;
+
+  background: #f2f6ef;
+
+  color: #53634e;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CAMERA CONTAINER
+========================================= */
+
+.verification-camera {
+  width: 100%;
+}
+
+
+.video-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #1d1916;
+
+  border: 1px solid #d9cec2;
+}
+
+
+.video-wrapper video {
+  display: block;
+
+  width: 100%;
+
+  max-height: 480px;
+
+  object-fit: cover;
+
+  background: #1d1916;
+}
+
+
+/* =========================================
+   DOCUMENT OVERLAY
+========================================= */
+
+.document-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+.document-frame {
+  width: 72%;
+  max-width: 500px;
+
+  aspect-ratio: 1.58 / 1;
+
+  border: 3px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 0 0 9999px rgba(0, 0, 0, 0.28);
+}
+
+
+.document-overlay span {
+  margin-top: 18px;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: rgba(40, 30, 23, 0.82);
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FACE OVERLAY
+========================================= */
+
+.face-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+.face-frame {
+  width: 210px;
+  height: 270px;
+
+  border: 3px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 9999px rgba(0, 0, 0, 0.28);
+}
+
+
+.face-overlay span {
+  margin-top: 18px;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: rgba(40, 30, 23, 0.82);
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CAMERA BUTTONS
+========================================= */
+
+.camera-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+
+.take-photo-btn {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #71806a;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.take-photo-btn:hover {
+  background: #61715b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(97, 113, 91, 0.2);
+}
+
+
+.cancel-camera-btn {
+  padding: 12px 18px;
+
+  border: 1px solid #d9cec2;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #6d5848;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.cancel-camera-btn:hover {
+  background: #f7f1ea;
+
+  border-color: #bcae9f;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.verification-result {
+  width: 100%;
+}
+
+
+.verification-result img {
+  display: block;
+
+  width: 100%;
+
+  max-height: 400px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  background: #f4efe8;
+
+  border: 1px solid #ded3c8;
+}
+
+
+/* =========================================
+   SUCCESS AREA
+========================================= */
+
+.verification-success {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 12px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #dce5d9;
+
+  border-radius: 10px;
+
+  background: #f3f7f1;
+}
+
+
+.verification-success span {
+  color: #5d6c57;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+.verification-success button {
+  padding: 8px 12px;
+
+  border: 1px solid #cbd7c7;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #63725d;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+
+.verification-success button:hover {
+  background: #71806a;
+
+  border-color: #71806a;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   FACE RESULT
+========================================= */
+
+.face-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.face-result img {
+  width: 220px;
+  height: 280px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 4px solid #e3e9df;
+
+  background: #f4efe8;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .verification-card {
+    padding: 22px 18px;
+  }
+
+
+  .verification-title {
+    gap: 11px;
+  }
+
+
+  .verification-number {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .verification-title h3 {
+    font-size: 16px;
+  }
+
+
+  .verification-title p {
+    font-size: 11px;
+  }
+
+
+  .document-frame {
+    width: 80%;
+  }
+
+
+  .face-frame {
+    width: 175px;
+    height: 230px;
+  }
+
+
+  .camera-buttons {
+    flex-direction: column;
+  }
+
+
+  .take-photo-btn,
+  .cancel-camera-btn {
+    width: 100%;
+  }
+
+
+  .verification-success {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .verification-success button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .verification-card {
+    padding: 20px 15px;
+  }
+
+
+  .verification-title {
+    align-items: flex-start;
+  }
+
+
+  .verification-title h3 {
+    font-size: 15px;
+  }
+
+
+  .document-frame {
+    width: 84%;
+  }
+
+
+  .face-frame {
+    width: 150px;
+    height: 205px;
+  }
+
+
+  .document-overlay span,
+  .face-overlay span {
+    font-size: 10px;
+  }
+
+}
