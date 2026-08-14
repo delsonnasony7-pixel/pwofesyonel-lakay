@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 
 import ProfessionalProfile from "./pages/ProfessionalProfile";
 import ProfessionalContact from "./pages/ProfessionalContact";
+import ProfessionalSetup from "./pages/ProfessionalSetup";
 
 function App() {
   return (
@@ -47,7 +48,10 @@ function App() {
           path="/professional/:id/contact"
           element={<ProfessionalContact />}
         />
-
+<Route
+  path="/professional-setup"
+  element={<ProfessionalSetup />}
+/>v
       </Routes>
     </BrowserRouter>
   );

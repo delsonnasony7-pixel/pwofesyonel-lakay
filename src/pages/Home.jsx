@@ -3,8 +3,10 @@ import Navbar from "../components/Navbar";
 import ProfessionalCard from "../components/ProfessionalCard";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+
 const Home = () => {
   const navigate = useNavigate();
+
   return (
     <>
       <Navbar />
@@ -18,7 +20,7 @@ const Home = () => {
             <div className="hero-content">
 
               <span className="hero-badge">
-                <h4>* Sèvis pwofesyonèl toupre ou </h4>
+                <h4>* Sèvis pwofesyonèl toupre ou</h4>
               </span>
 
               <h1>
@@ -36,12 +38,18 @@ const Home = () => {
 
               <div className="hero-buttons">
 
-                <button className="primary-btn">
+                <button
+                  className="primary-btn"
+                  onClick={() => navigate("/professionals")}
+                >
                   Jwenn yon pwofesyonèl
                 </button>
 
-                <button className="secondary-btn">
-                  Mwen se yon pwofesyonèl
+                <button
+                  className="secondary-btn"
+                  onClick={() => navigate("/categories")}
+                >
+                  Eksplore kategori
                 </button>
 
               </div>
@@ -49,6 +57,7 @@ const Home = () => {
             </div>
 
 
+            {/* HERO PROFESSIONAL CARD */}
             <div className="hero-visual">
 
               <div className="hero-card">
@@ -75,8 +84,11 @@ const Home = () => {
                   📍 Delmas, Haïti
                 </div>
 
-                <button className="profile-btn" 
-                onClick={() => navigate("/professional/jean-pierre")}
+                <button
+                  className="profile-btn"
+                  onClick={() =>
+                    navigate("/professional/jean-pierre")
+                  }
                 >
                   Gade pwofil
                 </button>
@@ -89,80 +101,82 @@ const Home = () => {
         </section>
 
 
-       
-{/* SEARCH SECTION */}
-<section className="search-section">
+        {/* SEARCH SECTION */}
+        <section className="search-section">
 
-  <div className="search-container">
+          <div className="search-container">
 
-    <div className="search-heading">
+            <div className="search-heading">
 
-      <span>JWENN YON PWOFESYONÈL</span>
+              <span>JWENN YON PWOFESYONÈL</span>
 
-      <h2>
-        Ki sèvis ou bezwen?
-      </h2>
+              <h2>
+                Ki sèvis ou bezwen?
+              </h2>
 
-      <p>
-        Tape sèvis la ak zòn ou ye a pou jwenn
-        pwofesyonèl ki toupre ou.
-      </p>
+              <p>
+                Tape sèvis la ak zòn ou ye a pou jwenn
+                pwofesyonèl ki toupre ou.
+              </p>
 
-    </div>
-
-
-    <div className="search-box">
-
-      {/* SERVICE */}
-      <div className="search-field">
-
-        <span className="search-icon">
-          🔧
-        </span>
-
-        <div>
-          <small>Sèvis</small>
-
-          <input
-            type="text"
-            placeholder="Tape sèvis ou bezwen..."
-          />
-        </div>
-
-      </div>
+            </div>
 
 
-      <div className="search-divider"></div>
+            <div className="search-box">
+
+              {/* SERVICE */}
+              <div className="search-field">
+
+                <span className="search-icon">
+                  🔧
+                </span>
+
+                <div>
+                  <small>Sèvis</small>
+
+                  <input
+                    type="text"
+                    placeholder="Tape sèvis ou bezwen..."
+                  />
+                </div>
+
+              </div>
 
 
-      {/* LOCATION */}
-      <div className="search-field">
-
-        <span className="search-icon">
-          📍
-        </span>
-
-        <div>
-          <small>Zòn</small>
-
-          <input
-            type="text"
-            placeholder="Tape zòn ou..."
-          />
-        </div>
-
-      </div>
+              <div className="search-divider"></div>
 
 
-      <button className="search-btn">
-        🔍 Chèche
-      </button>
+              {/* LOCATION */}
+              <div className="search-field">
 
-    </div>
+                <span className="search-icon">
+                  📍
+                </span>
 
-  </div>
+                <div>
+                  <small>Zòn</small>
 
-</section>
+                  <input
+                    type="text"
+                    placeholder="Tape zòn ou..."
+                  />
+                </div>
+
+              </div>
+
+
+              <button
+                className="search-btn"
+                onClick={() => navigate("/professionals")}
+              >
+                🔍 Chèche
+              </button>
+
+            </div>
+
+          </div>
+
+        </section>
 
 
         {/* CATEGORIES SECTION */}
@@ -185,7 +199,10 @@ const Home = () => {
               </div>
 
 
-              <button className="view-all-btn">
+              <button
+                className="view-all-btn"
+                onClick={() => navigate("/categories")}
+              >
                 Gade tout →
               </button>
 
@@ -322,7 +339,10 @@ const Home = () => {
               </div>
 
 
-              <button className="view-all-btn">
+              <button
+                className="view-all-btn"
+                onClick={() => navigate("/professionals")}
+              >
                 Gade tout →
               </button>
 
@@ -449,7 +469,9 @@ const Home = () => {
         </section>
 
       </main>
-      <Footer/>
+
+      <Footer />
+
     </>
   );
 };

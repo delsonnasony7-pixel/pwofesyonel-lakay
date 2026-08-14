@@ -1,4 +1,5 @@
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./RegisterModal.css";
 
 const RegisterModal = ({
@@ -7,11 +8,24 @@ const RegisterModal = ({
   onSwitchToLogin,
 }) => {
 
-  console.log("RegisterModal:", isOpen);
+  const [accountCreated, setAccountCreated] = useState(false);
+
+  const navigate = useNavigate();
 
   if (!isOpen) {
     return null;
   }
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    setAccountCreated(true);
+  };
+
+  const handleContinue = () => {
+    onClose();
+    navigate("/professional-setup");
+  };
 
   return (
     <div
@@ -35,156 +49,212 @@ const RegisterModal = ({
         </button>
 
 
-        {/* HEADER */}
+        {/* ================================
+            ACCOUNT CREATED
+        ================================= */}
 
-        <div className="register-modal-header">
+        {accountCreated ? (
 
-          <div className="register-modal-logo">
-            PL
-          </div>
+          <div className="account-success">
 
-          <h2>
-            Kreye kont ou
-          </h2>
+            <div className="success-icon">
+              ✓
+            </div>
 
-          <p>
-            Enskri sou Pwofesyonèl Lakay pou kòmanse.
-          </p>
+            <h2>
+              Kont ou an kreye ak siksè!
+            </h2>
 
-        </div>
+            <p>
+              Mèsi paske ou chwazi Pwofesyonèl Lakay.
+              Kont ou pare. Kounye a ou ka kontinye
+              konfigirasyon pwofil ou.
+            </p>
 
-
-        {/* FORM */}
-
-        <form className="register-form">
-
-          {/* NAME */}
-
-          <div className="register-form-group">
-
-            <label htmlFor="register-name">
-              Non konplè
-            </label>
-
-            <input
-              id="register-name"
-              type="text"
-              placeholder="Antre non konplè ou"
-            />
+            <button
+              type="button"
+              className="continue-setup-btn"
+              onClick={handleContinue}
+            >
+              Kontinye konfigirasyon →
+            </button>
 
           </div>
 
+        ) : (
 
-          {/* EMAIL */}
+          <>
+            {/* ================================
+                HEADER
+            ================================= */}
 
-          <div className="register-form-group">
+            <div className="register-modal-header">
 
-            <label htmlFor="register-email">
-              Email
-            </label>
+              <div className="register-modal-logo">
+                PL
+              </div>
 
-            <input
-              id="register-email"
-              type="email"
-              placeholder="Antre email ou"
-            />
+              <h2>
+                Kreye kont ou
+              </h2>
 
-          </div>
+              <p>
+                Enskri sou Pwofesyonèl Lakay pou kòmanse.
+              </p>
 
-
-          {/* PHONE */}
-
-          <div className="register-form-group">
-
-            <label htmlFor="register-phone">
-              Telefòn
-            </label>
-
-            <input
-              id="register-phone"
-              type="tel"
-              placeholder="+509..."
-            />
-
-          </div>
+            </div>
 
 
-          {/* PASSWORD */}
+            {/* ================================
+                FORM
+            ================================= */}
 
-          <div className="register-form-group">
+            <form
+              className="register-form"
+              onSubmit={handleRegister}
+            >
 
-            <label htmlFor="register-password">
-              Modpas
-            </label>
+              {/* NAME */}
 
-            <input
-              id="register-password"
-              type="password"
-              placeholder="Kreye yon modpas"
-            />
+              <div className="register-form-group">
 
-          </div>
+                <label htmlFor="register-name">
+                  Non konplè
+                </label>
 
+                <input
+                  id="register-name"
+                  type="text"
+                  placeholder="Antre non konplè ou"
+                  required
+                />
 
-          {/* CONFIRM PASSWORD */}
-
-          <div className="register-form-group">
-
-            <label htmlFor="register-confirm-password">
-              Konfime modpas
-            </label>
-
-            <input
-              id="register-confirm-password"
-              type="password"
-              placeholder="Ekri modpas la ankò"
-            />
-
-          </div>
+              </div>
 
 
-          {/* TERMS */}
+              {/* EMAIL */}
 
-          <label className="register-terms">
+              <div className="register-form-group">
 
-            <input type="checkbox" />
+                <label htmlFor="register-email">
+                  Email
+                </label>
 
-            <span>
-              Mwen dakò ak kondisyon ak règleman
-              Pwofesyonèl Lakay yo.
-            </span>
+                <input
+                  id="register-email"
+                  type="email"
+                  placeholder="Antre email ou"
+                  required
+                />
 
-          </label>
-
-
-          {/* SUBMIT */}
-
-          <button
-            type="submit"
-            className="register-submit"
-          >
-            Kreye kont
-          </button>
-
-        </form>
+              </div>
 
 
-        {/* LOGIN LINK */}
+              {/* PHONE */}
 
-        <div className="register-login">
+              <div className="register-form-group">
 
-          <span>
-            Ou deja gen yon kont?
-          </span>
+                <label htmlFor="register-phone">
+                  Telefòn
+                </label>
 
-          <button
-            type="button"
-            onClick={onSwitchToLogin}
-          >
-            Konekte
-          </button>
+                <input
+                  id="register-phone"
+                  type="tel"
+                  placeholder="+509..."
+                  required
+                />
 
-        </div>
+              </div>
+
+
+              {/* PASSWORD */}
+
+              <div className="register-form-group">
+
+                <label htmlFor="register-password">
+                  Modpas
+                </label>
+
+                <input
+                  id="register-password"
+                  type="password"
+                  placeholder="Kreye yon modpas"
+                  required
+                />
+
+              </div>
+
+
+              {/* CONFIRM PASSWORD */}
+
+              <div className="register-form-group">
+
+                <label htmlFor="register-confirm-password">
+                  Konfime modpas
+                </label>
+
+                <input
+                  id="register-confirm-password"
+                  type="password"
+                  placeholder="Ekri modpas la ankò"
+                  required
+                />
+
+              </div>
+
+
+              {/* TERMS */}
+
+              <label className="register-terms">
+
+                <input
+                  type="checkbox"
+                  required
+                />
+
+                <span>
+                  Mwen dakò ak kondisyon ak règleman
+                  Pwofesyonèl Lakay yo.
+                </span>
+
+              </label>
+
+
+              {/* SUBMIT */}
+
+              <button
+                type="submit"
+                className="register-submit"
+              >
+                Kreye kont
+              </button>
+
+            </form>
+
+
+            {/* ================================
+                LOGIN
+            ================================= */}
+
+            <div className="register-login">
+
+              <span>
+                Ou deja gen yon kont?
+              </span>
+
+              <button
+                type="button"
+                onClick={onSwitchToLogin}
+              >
+                Konekte
+              </button>
+
+            </div>
+
+          </>
+
+        )}
 
       </div>
 
@@ -193,4 +263,3 @@ const RegisterModal = ({
 };
 
 export default RegisterModal;
-

@@ -1,105 +1,94 @@
-
-/* =========================
-   REGISTER OVERLAY
-========================= */
+/* ========================================
+   REGISTER MODAL OVERLAY
+======================================== */
 
 .register-modal-overlay {
   position: fixed;
-
   inset: 0;
 
   z-index: 9999;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   padding: 20px;
 
-  background: rgba(15, 20, 25, 0.65);
+  background: rgba(35, 24, 17, 0.55);
 
-  backdrop-filter: blur(5px);
-
-  animation: registerFadeIn 0.25s ease;
+  backdrop-filter: blur(4px);
 }
 
 
-/* =========================
+/* ========================================
    REGISTER MODAL
-========================= */
+======================================== */
 
 .register-modal {
   position: relative;
 
   width: 100%;
-
-  max-width: 450px;
-
+  max-width: 430px;
   max-height: 90vh;
 
   overflow-y: auto;
 
-  padding: 38px;
+  padding: 32px;
 
   box-sizing: border-box;
 
-  background: #ffffff;
+  background: #fffdf9;
+
+  border: 1px solid #eadfd3;
 
   border-radius: 18px;
 
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.2);
-
-  animation: registerModalIn 0.3s ease;
+  box-shadow: 0 25px 60px rgba(45, 30, 20, 0.18);
 }
 
 
-/* =========================
-   CLOSE
-========================= */
+/* ========================================
+   CLOSE BUTTON
+======================================== */
 
 .register-modal-close {
   position: absolute;
 
-  top: 15px;
+  top: 14px;
+  right: 16px;
 
-  right: 17px;
+  width: 32px;
+  height: 32px;
 
-  width: 35px;
-
-  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border: none;
-
   border-radius: 50%;
 
-  background: #f4f5f6;
+  background: #f5eee7;
 
-  color: #5c6670;
+  color: #5c3824;
 
-  font-size: 25px;
-
+  font-size: 22px;
   line-height: 1;
 
   cursor: pointer;
 
-  transition: 0.25s;
+  transition: 0.2s ease;
 }
 
 .register-modal-close:hover {
-  background: #17202a;
+  background: #5c3824;
 
-  color: white;
-
-  transform: rotate(90deg);
+  color: #ffffff;
 }
 
 
-/* =========================
+/* ========================================
    HEADER
-========================= */
+======================================== */
 
 .register-modal-header {
   text-align: center;
@@ -108,55 +97,48 @@
 }
 
 .register-modal-logo {
-  width: 55px;
+  width: 48px;
+  height: 48px;
 
-  height: 55px;
-
-  margin: 0 auto 15px;
+  margin: 0 auto 14px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
-  background: #17202a;
+  background: #5c3824;
 
-  color: #d99a32;
+  color: #ffffff;
 
-  font-size: 18px;
-
+  font-size: 15px;
   font-weight: 800;
-
-  letter-spacing: 1px;
 }
 
 .register-modal-header h2 {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
 
-  color: #17202a;
+  color: #3d281b;
 
-  font-size: 28px;
-
+  font-size: 24px;
   font-weight: 800;
 }
 
 .register-modal-header p {
   margin: 0;
 
-  color: #7a838d;
+  color: #806f62;
 
-  font-size: 14px;
+  font-size: 13px;
 
   line-height: 1.6;
 }
 
 
-/* =========================
-   FORM
-========================= */
+/* ========================================
+   REGISTER FORM
+======================================== */
 
 .register-form {
   display: flex;
@@ -171,13 +153,13 @@
 
   flex-direction: column;
 
-  gap: 7px;
+  gap: 6px;
 }
 
 .register-form-group label {
-  color: #303943;
+  color: #4b3426;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 }
@@ -187,40 +169,39 @@
 
   box-sizing: border-box;
 
-  padding: 12px 14px;
+  padding: 12px 13px;
 
-  border: 1px solid #dfe3e7;
+  background: #ffffff;
 
-  border-radius: 8px;
+  border: 1px solid #dfd2c6;
+
+  border-radius: 9px;
 
   outline: none;
 
-  background: white;
-
-  color: #17202a;
+  color: #3d281b;
 
   font-family: inherit;
 
-  font-size: 14px;
+  font-size: 13px;
 
-  transition: 0.2s;
-}
-
-.register-form-group input::placeholder {
-  color: #a0a7ae;
+  transition: 0.2s ease;
 }
 
 .register-form-group input:focus {
-  border-color: #d99a32;
+  border-color: #a06d48;
 
-  box-shadow:
-    0 0 0 3px rgba(217, 154, 50, 0.12);
+  box-shadow: 0 0 0 3px rgba(160, 109, 72, 0.08);
+}
+
+.register-form-group input::placeholder {
+  color: #aa9b8f;
 }
 
 
-/* =========================
+/* ========================================
    TERMS
-========================= */
+======================================== */
 
 .register-terms {
   display: flex;
@@ -231,9 +212,9 @@
 
   margin-top: 2px;
 
-  color: #737c85;
+  color: #79685b;
 
-  font-size: 12px;
+  font-size: 11px;
 
   line-height: 1.5;
 
@@ -243,68 +224,64 @@
 .register-terms input {
   margin-top: 2px;
 
-  accent-color: #d99a32;
-
-  cursor: pointer;
+  accent-color: #5c3824;
 }
 
 
-/* =========================
-   SUBMIT
-========================= */
+/* ========================================
+   CREATE ACCOUNT BUTTON
+======================================== */
 
-.register-submit {
+.register-form .register-submit {
   width: 100%;
 
-  padding: 14px;
+  margin-top: 5px;
+
+  padding: 13px 18px;
 
   border: none;
 
-  border-radius: 8px;
+  border-radius: 9px;
 
-  background: #17202a;
+  background: #5c3824;
 
-  color: white;
+  color: #ffffff;
 
   font-family: inherit;
 
-  font-size: 14px;
+  font-size: 13px;
 
   font-weight: 700;
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition: 0.2s ease;
 }
 
-.register-submit:hover {
-  background: #d99a32;
+.register-form .register-submit:hover {
+  background: #432719;
 
   transform: translateY(-1px);
-
-  box-shadow:
-    0 8px 18px rgba(217, 154, 50, 0.2);
 }
 
 
-/* =========================
-   LOGIN LINK
-========================= */
+/* ========================================
+   LOGIN
+======================================== */
 
 .register-login {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 5px;
 
   margin-top: 20px;
 
-  color: #7a838d;
+  color: #806f62;
 
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .register-login button {
@@ -312,13 +289,13 @@
 
   border: none;
 
-  background: none;
+  background: transparent;
 
-  color: #c88722;
+  color: #5c3824;
 
   font-family: inherit;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -330,54 +307,133 @@
 }
 
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ========================================
+   SUCCESS MESSAGE
+======================================== */
 
-@keyframes registerFadeIn {
-  from {
-    opacity: 0;
-  }
+.account-success {
+  width: 100%;
 
-  to {
-    opacity: 1;
-  }
-}
+  box-sizing: border-box;
 
-@keyframes registerModalIn {
-  from {
-    opacity: 0;
+  padding: 35px 8px 20px;
 
-    transform:
-      translateY(15px)
-      scale(0.97);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-  }
+  text-align: center;
 }
 
 
-/* =========================
+/* CHECK ICON */
+
+.account-success .success-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf6ee;
+
+  border: 1px solid #cfe2d1;
+
+  color: #47744d;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+
+/* SUCCESS TITLE */
+
+.account-success h2 {
+  margin: 0 0 12px;
+
+  color: #3d281b;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+/* SUCCESS TEXT */
+
+.account-success p {
+  width: 100%;
+  max-width: 350px;
+
+  margin: 0 auto 25px;
+
+  color: #79685b;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* CONTINUE BUTTON */
+
+.account-success .continue-setup-btn {
+  display: block;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #5c3824;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.account-success .continue-setup-btn:hover {
+  background: #432719;
+
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
    MOBILE
-========================= */
+======================================== */
 
 @media (max-width: 500px) {
 
-  .register-modal {
-    padding: 30px 22px;
+  .register-modal-overlay {
+    padding: 12px;
+  }
 
-    border-radius: 15px;
+  .register-modal {
+    padding: 27px 21px;
   }
 
   .register-modal-header h2 {
-    font-size: 24px;
+    font-size: 21px;
+  }
+
+  .account-success h2 {
+    font-size: 20px;
   }
 
 }
-
