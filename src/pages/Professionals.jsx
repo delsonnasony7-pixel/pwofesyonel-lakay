@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProfessionalCard from "../components/ProfessionalCard";
+import professionals from "../data/professionals";
 import "./Professionals.css";
 
 const Professionals = () => {
@@ -104,7 +105,7 @@ const Professionals = () => {
                 </h2>
 
                 <p>
-                  356 pwofesyonèl jwenn
+                  {professionals.length} pwofesyonèl jwenn
                 </p>
 
               </div>
@@ -136,70 +137,19 @@ const Professionals = () => {
             {/* PROFESSIONAL CARDS */}
             <div className="professionals-page-grid">
 
-              {/* JEAN PIERRE */}
-              <ProfessionalCard
-                id="jean-pierre"
-                name="Jean Pierre"
-                profession="Elektrisyen"
-                location="Delmas"
-                rating="4.9"
-                image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500"
-              />
+              {professionals.map((professional) => (
 
+                <ProfessionalCard
+                  key={professional.id}
+                  id={professional.id}
+                  name={professional.name}
+                  profession={professional.profession}
+                  location={professional.location}
+                  rating={professional.rating}
+                  image={professional.image}
+                />
 
-              {/* MARIE LOUIS */}
-              <ProfessionalCard
-                id="marie-louis"
-                name="Marie Louis"
-                profession="Plonbye"
-                location="Pétion-Ville"
-                rating="4.8"
-                image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500"
-              />
-
-
-              {/* PAUL JOSEPH */}
-              <ProfessionalCard
-                id="paul-joseph"
-                name="Paul Joseph"
-                profession="Mekanisyen"
-                location="Carrefour"
-                rating="4.9"
-                image="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500"
-              />
-
-
-              {/* DAVID CHARLES */}
-              <ProfessionalCard
-                id="david-charles"
-                name="David Charles"
-                profession="Pent"
-                location="Tabarre"
-                rating="4.7"
-                image="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500"
-              />
-
-
-              {/* SAMUEL JEAN */}
-              <ProfessionalCard
-                id="samuel-jean"
-                name="Samuel Jean"
-                profession="Mason"
-                location="Pétion-Ville"
-                rating="4.8"
-                image="https://images.unsplash.com/photo-1504593811423-6dd665756598?w=500"
-              />
-
-
-              {/* SARAH MICHEL */}
-              <ProfessionalCard
-                id="sarah-michel"
-                name="Sarah Michel"
-                profession="Enfimyè"
-                location="Delmas"
-                rating="4.9"
-                image="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=500"
-              />
+              ))}
 
             </div>
 
