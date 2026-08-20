@@ -23,100 +23,46 @@
 
 .professionals-section .section-heading span {
   display: block;
-
   margin-bottom: 10px;
-
   color: #8b5e3c;
-
   font-size: 13px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
 
 .professionals-section .section-heading h2 {
   margin: 0;
-
   color: #3f2b1f;
-
   font-size: 34px;
   font-weight: 700;
-
   line-height: 1.2;
 }
-
 
 /* Gade tout bouton */
 
 .professionals-section .view-all-btn {
   border: none;
-
   background: transparent;
-
   color: #6f472f;
-
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
 }
 
 .professionals-section .view-all-btn:hover {
   color: #3f2b1f;
-
   transform: translateX(4px);
 }
-
 
 /* PROFESSIONAL CARDS GRID */
 
 .professionals-section .professionals-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 26px;
 }
 
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 900px) {
-
-  .professionals-section .professionals-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .professionals-section {
-    padding: 65px 0;
-  }
-
-  .professionals-section .section-heading {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    margin-bottom: 30px;
-  }
-
-  .professionals-section .section-heading h2 {
-    font-size: 28px;
-  }
-
-  .professionals-section .professionals-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
 
 /* =========================================
    KI SÈVIS OU BEZWEN?
@@ -142,11 +88,9 @@
   );
 
   border: 1px solid #e8ddd1;
-
   border-radius: 20px;
 
   padding: 27px;
-
   min-height: 220px;
 
   display: flex;
@@ -171,7 +115,6 @@
   content: "";
 
   position: absolute;
-
   top: 0;
   left: 25px;
 
@@ -211,9 +154,7 @@
   margin-bottom: 17px;
 
   background: #f1e5d8;
-
   border: 1px solid #e4d4c3;
-
   border-radius: 15px;
 
   font-size: 27px;
@@ -238,7 +179,6 @@
   color: #3c2a1f;
 
   font-size: 20px;
-
   font-weight: 700;
 
   letter-spacing: -0.2px;
@@ -253,7 +193,6 @@
   color: #8a6a50;
 
   font-size: 14px;
-
   font-weight: 500;
 }
 
@@ -275,15 +214,12 @@
   width: auto;
 
   border: none;
-
   border-radius: 8px;
 
   background: #5c3b28;
-
   color: white;
 
   font-size: 12px;
-
   font-weight: 600;
 
   cursor: pointer;
@@ -302,7 +238,6 @@
 
 .categories-section .category-professionals-btn span {
   font-size: 16px;
-
   line-height: 1;
 
   transition: transform 0.25s ease;
@@ -332,6 +267,10 @@
 
 @media (max-width: 900px) {
 
+  .professionals-section .professionals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .categories-section .categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -345,13 +284,30 @@
 
 @media (max-width: 600px) {
 
+  .professionals-section {
+    padding: 65px 0;
+  }
+
+  .professionals-section .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .professionals-section .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .professionals-section .professionals-grid {
+    grid-template-columns: 1fr;
+  }
+
   .categories-section .categories-grid {
     grid-template-columns: 1fr;
   }
 
   .categories-section .category-card {
     min-height: auto;
-
     padding: 24px;
   }
 
