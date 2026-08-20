@@ -992,3 +992,43 @@ Lè w mande:
 nou pral ajoute database san nou pa retire components ki deja fèt.
 
 Pwojè a dwe grandi etap pa etap.
+
+
+# AJOUT — DÈNYE TRAVAY NOU FÈ SOU PWOJÈ PWOFESYONÈL LAKAY
+
+Nan dènye etap devlopman an, nou amelyore fason pwojè a jere pwofesyonèl yo. Nou mete yon sistèm done tanporè pou pwofesyonèl yo, ki pèmèt chak pwofesyonèl gen pwòp enfòmasyon pa li tankou non, metye, zòn, foto, rating, deskripsyon ak sèvis li ofri.
+
+Nou amelyore paj **Pwofesyonèl yo** pou li kapab montre plizyè pwofesyonèl apati menm sous done a, olye pou nou ekri chak pwofesyonèl apa nan paj la.
+
+Nou amelyore **Professional Card** la pou chak pwofesyonèl gen yon ID inik. ID sa a sèvi pou mennen itilizatè a sou bon pwofil pwofesyonèl la lè li klike sou **“Gade pwofil”**.
+
+Nou mete sistèm **Dynamic Professional Profile** la. Sa vle di chak pwofesyonèl ka gen pwòp paj profile pa li selon ID li. Pa egzanp, Jean Pierre gen pwòp pwofil li, Marie Louis gen pwòp pwofil pa li, elatriye.
+
+Nou te jwenn epi korije yon pwoblèm kote kèk bouton **“Gade pwofil”** t ap mennen sou yon URL ki te gen `undefined`. Pwoblèm nan te soti nan kèk Professional Card sou Home Page la ki pa t gen ID pwofesyonèl la. Nou ajoute ID ki koresponn ak chak pwofesyonèl pou navigation lan mache kòrèkteman.
+
+Nou amelyore **Home Page** la tou pou pwofesyonèl rekòmande yo sèvi ak menm sistèm ID ak pwofesyonèl ki sou paj Professionals la. Konsa, itilizatè a kapab jwenn menm pwofesyonèl la depi Home Page oswa depi Professionals Page.
+
+Nou mete yon **Categories Page** ki òganize diferan kalite sèvis platfòm lan pral ofri. Kategori yo gen ladan Kay & Reparasyon, Otomobil & Transpò, Teknoloji, Kay & Netwayaj, Bote & Swen pèsonèl, Sante & Swen, Edikasyon, Biznis & Sèvis, Evènman, Travay espesyalize ak lòt sèvis.
+
+Pou kounye a, done pwofesyonèl yo toujou nan yon fichye tanporè ki sèvi kòm yon ti database pandan devlopman an. **Nou poko retire fichye sa a**, paske li nesesè pou teste aplikasyon an jiskaske vrè database la konekte.
+
+### Pwochen gwo etap la
+
+Pwochen etap enpòtan an se mete yon **vrè database** nan pwojè a. Lè sa fèt, pwofesyonèl yo pap bezwen ekri dirèkteman nan code la ankò.
+
+Yon pwofesyonèl pral kapab:
+
+* kreye kont li;
+* mete enfòmasyon pèsonèl li;
+* chwazi metye li;
+* ajoute sèvis li yo;
+* mete zòn kote li travay;
+* ajoute foto li;
+* mete enfòmasyon kontak li;
+* soumèt enfòmasyon pou verifikasyon;
+* resevwa yon pwofil sou platfòm lan.
+
+Done sa yo pral antre nan database la epi sit la pral kapab montre yo otomatikman sou Professional Page, Professional Card ak Professional Profile.
+
+Sa ap fè **Pwofesyonèl Lakay** pase soti nan yon senp pwojè React ki gen done tès pou rive nan yon vrè platfòm kote kliyan ak pwofesyonèl kapab itilize sistèm nan ak done reyèl.
+

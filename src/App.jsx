@@ -56,6 +56,13 @@ function App() {
 <Route
   path="/identity-verification"
   element={<IdentityVerification />}
+
+/>
+
+
+<Route
+  path="/professional-setup"
+  element={<ProfessionalSetup />}
 />
       </Routes>
     </BrowserRouter>

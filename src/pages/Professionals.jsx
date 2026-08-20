@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProfessionalCard from "../components/ProfessionalCard";
@@ -6,8 +7,30 @@ import professionals from "../data/professionals";
 import "./Professionals.css";
 
 const Professionals = () => {
-  const [service, setService] = useState("");
+
+  const [searchParams] = useSearchParams();
+
+  const selectedService = searchParams.get("service") || "";
+
+  const [service, setService] = useState(selectedService);
   const [location, setLocation] = useState("");
+
+  const filteredProfessionals = professionals.filter((professional) => {
+
+    const matchesService =
+      service.trim() === "" ||
+      professional.profession
+        .toLowerCase()
+        .includes(service.toLowerCase());
+
+    const matchesLocation =
+      location.trim() === "" ||
+      professional.location
+        .toLowerCase()
+        .includes(location.toLowerCase());
+
+    return matchesService && matchesLocation;
+  });
 
   return (
     <>
@@ -37,7 +60,7 @@ const Professionals = () => {
         </section>
 
 
-        {/* SEARCH & FILTER */}
+        {/* SEARCH */}
         <section className="professionals-search">
 
           <div className="professionals-search-container">
@@ -101,11 +124,14 @@ const Professionals = () => {
               <div>
 
                 <h2>
-                  Pwofesyonèl disponib
+                  {service
+                    ? `Pwofesyonèl ${service}`
+                    : "Pwofesyonèl disponib"}
                 </h2>
 
                 <p>
-                  {professionals.length} pwofesyonèl jwenn
+                  {filteredProfessionals.length}{" "}
+                  pwofesyonèl jwenn
                 </p>
 
               </div>
@@ -134,22 +160,40 @@ const Professionals = () => {
             </div>
 
 
-            {/* PROFESSIONAL CARDS */}
+            {/* CARDS */}
             <div className="professionals-page-grid">
 
-              {professionals.map((professional) => (
+              {filteredProfessionals.length > 0 ? (
 
-                <ProfessionalCard
-                  key={professional.id}
-                  id={professional.id}
-                  name={professional.name}
-                  profession={professional.profession}
-                  location={professional.location}
-                  rating={professional.rating}
-                  image={professional.image}
-                />
+                filteredProfessionals.map((professional) => (
 
-              ))}
+                  <ProfessionalCard
+                    key={professional.id}
+                    id={professional.id}
+                    name={professional.name}
+                    profession={professional.profession}
+                    location={professional.location}
+                    rating={professional.rating}
+                    image={professional.image}
+                  />
+
+                ))
+
+              ) : (
+
+                <div className="no-professionals">
+
+                  <h3>
+                    Pa gen pwofesyonèl pou sèvis sa a ankò.
+                  </h3>
+
+                  <p>
+                    Eseye yon lòt sèvis oswa yon lòt zòn.
+                  </p>
+
+                </div>
+
+              )}
 
             </div>
 

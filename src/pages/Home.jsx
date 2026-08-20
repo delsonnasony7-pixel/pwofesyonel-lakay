@@ -3,9 +3,53 @@ import Navbar from "../components/Navbar";
 import ProfessionalCard from "../components/ProfessionalCard";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import professionals from "../data/professionals";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  // Kategori popilè yo
+  const categories = [
+    {
+      icon: "🔧",
+      name: "Plonbye",
+      service: "Plonbye",
+    },
+    {
+      icon: "⚡",
+      name: "Elektrisyen",
+      service: "Elektrisyen",
+    },
+    {
+      icon: "🚗",
+      name: "Mekanisyen",
+      service: "Mekanisyen",
+    },
+    {
+      icon: "🎨",
+      name: "Pent",
+      service: "Pent",
+    },
+    {
+      icon: "🧱",
+      name: "Mason",
+      service: "Mason",
+    },
+    {
+      icon: "💻",
+      name: "Enfòmatik",
+      service: "Enfòmatik",
+    },
+  ];
+
+  // Konte konbyen pwofesyonèl ki genyen nan chak kategori
+  const getProfessionalCount = (service) => {
+    return professionals.filter(
+      (professional) =>
+        professional.profession.toLowerCase() ===
+        service.toLowerCase()
+    ).length;
+  };
 
   return (
     <>
@@ -13,10 +57,7 @@ const Home = () => {
 
       <main className="home">
 
-        {/* =========================================
-            HERO SECTION
-        ========================================= */}
-
+        {/* HERO SECTION */}
         <section className="hero">
 
           <div className="hero-container">
@@ -42,17 +83,12 @@ const Home = () => {
 
               <div className="hero-buttons">
 
-                {/* JWENN YON PWOFESYONÈL */}
-
                 <button
                   className="primary-btn"
                   onClick={() => navigate("/professionals")}
                 >
                   Jwenn yon pwofesyonèl
                 </button>
-
-
-                {/* ENSKRI KÒM PWOFESYONÈL */}
 
                 <button
                   className="secondary-btn"
@@ -66,53 +102,36 @@ const Home = () => {
             </div>
 
 
-            {/* =========================================
-                HERO PROFESSIONAL CARD
-            ========================================= */}
-
+            {/* HERO PROFESSIONAL CARD */}
             <div className="hero-visual">
 
               <div className="hero-card">
 
                 <div className="hero-card-top">
-
                   <span className="status-dot"></span>
-
                   Disponib kounye a
-
                 </div>
-
 
                 <div className="professional-avatar">
                   👨🏾‍🔧
                 </div>
 
-
                 <h3>
                   Jean Pierre
                 </h3>
-
 
                 <p>
                   Elektrisyen
                 </p>
 
-
                 <div className="rating">
-
                   ★★★★★
-
-                  <span>
-                    4.9
-                  </span>
-
+                  <span>4.9</span>
                 </div>
-
 
                 <div className="location">
                   📍 Delmas, Haïti
                 </div>
-
 
                 <button
                   className="profile-btn"
@@ -132,10 +151,7 @@ const Home = () => {
         </section>
 
 
-        {/* =========================================
-            SEARCH SECTION
-        ========================================= */}
-
+        {/* SEARCH SECTION */}
         <section className="search-section">
 
           <div className="search-container">
@@ -159,8 +175,6 @@ const Home = () => {
 
 
             <div className="search-box">
-
-              {/* SERVICE */}
 
               <div className="search-field">
 
@@ -187,8 +201,6 @@ const Home = () => {
               <div className="search-divider"></div>
 
 
-              {/* LOCATION */}
-
               <div className="search-field">
 
                 <span className="search-icon">
@@ -211,8 +223,6 @@ const Home = () => {
               </div>
 
 
-              {/* SEARCH BUTTON */}
-
               <button
                 className="search-btn"
                 onClick={() => navigate("/professionals")}
@@ -227,10 +237,7 @@ const Home = () => {
         </section>
 
 
-        {/* =========================================
-            CATEGORIES SECTION
-        ========================================= */}
-
+        {/* CATEGORIES SECTION */}
         <section className="categories-section">
 
           <div className="section-container">
@@ -262,107 +269,63 @@ const Home = () => {
 
             <div className="categories-grid">
 
+              {categories.map((category) => {
 
-              <div className="category-card">
+                const count = getProfessionalCount(
+                  category.service
+                );
 
-                <div className="category-icon">
-                  🔧
-                </div>
+                return (
+                  <div
+                    className="category-card"
+                    key={category.service}
+                    onClick={() =>
+                      navigate(
+                        `/professionals?service=${encodeURIComponent(
+                          category.service
+                        )}`
+                      )
+                    }
+                  >
 
-                <h3>
-                  Plonbye
-                </h3>
-
-                <p>
-                  124 pwofesyonèl
-                </p>
-
-              </div>
-
-
-              <div className="category-card">
-
-                <div className="category-icon">
-                  ⚡
-                </div>
-
-                <h3>
-                  Elektrisyen
-                </h3>
-
-                <p>
-                  98 pwofesyonèl
-                </p>
-
-              </div>
+                    <div className="category-icon">
+                      {category.icon}
+                    </div>
 
 
-              <div className="category-card">
-
-                <div className="category-icon">
-                  🚗
-                </div>
-
-                <h3>
-                  Mekanisyen
-                </h3>
-
-                <p>
-                  76 pwofesyonèl
-                </p>
-
-              </div>
+                    <h3>
+                      {category.name}
+                    </h3>
 
 
-              <div className="category-card">
-
-                <div className="category-icon">
-                  🎨
-                </div>
-
-                <h3>
-                  Pent
-                </h3>
-
-                <p>
-                  65 pwofesyonèl
-                </p>
-
-              </div>
+                    <p className="category-count">
+                      {count}{" "}
+                      {count === 1
+                        ? "pwofesyonèl"
+                        : "pwofesyonèl"}
+                    </p>
 
 
-              <div className="category-card">
+                    <button
+                      type="button"
+                      className="category-professionals-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
 
-                <div className="category-icon">
-                  🧱
-                </div>
+                        navigate(
+                          `/professionals?service=${encodeURIComponent(
+                            category.service
+                          )}`
+                        );
+                      }}
+                    >
+                      Gade pwofesyonèl
+                      <span>→</span>
+                    </button>
 
-                <h3>
-                  Mason
-                </h3>
-
-                <p>
-                  82 pwofesyonèl
-                </p>
-
-              </div>
-
-
-              <div className="category-card">
-
-                <div className="category-icon">
-                  💻
-                </div>
-
-                <h3>
-                  Enfòmatik
-                </h3>
-
-                <p>
-                  54 pwofesyonèl
-                </p>
-
-              </div>
+                  </div>
+                );
+              })}
 
             </div>
 
@@ -371,10 +334,7 @@ const Home = () => {
         </section>
 
 
-        {/* =========================================
-            PROFESSIONALS SECTION
-        ========================================= */}
-
+        {/* PROFESSIONALS SECTION */}
         <section className="professionals-section">
 
           <div className="section-container">
@@ -406,8 +366,8 @@ const Home = () => {
 
             <div className="professionals-grid">
 
-
               <ProfessionalCard
+                id="jean-pierre"
                 name="Jean Pierre"
                 profession="Elektrisyen"
                 location="Delmas"
@@ -417,6 +377,7 @@ const Home = () => {
 
 
               <ProfessionalCard
+                id="marie-louis"
                 name="Marie Louis"
                 profession="Plonbye"
                 location="Pétion-Ville"
@@ -426,6 +387,7 @@ const Home = () => {
 
 
               <ProfessionalCard
+                id="paul-joseph"
                 name="Paul Joseph"
                 profession="Mekanisyen"
                 location="Carrefour"
@@ -440,10 +402,7 @@ const Home = () => {
         </section>
 
 
-        {/* =========================================
-            HOW IT WORKS
-        ========================================= */}
-
+        {/* HOW IT WORKS */}
         <section className="how-section">
 
           <div className="section-container">
@@ -467,7 +426,6 @@ const Home = () => {
 
 
             <div className="steps">
-
 
               <div className="step">
 
@@ -532,7 +490,6 @@ const Home = () => {
 
 
       <Footer />
-
     </>
   );
 };

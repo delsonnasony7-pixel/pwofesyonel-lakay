@@ -18,7 +18,6 @@ const ProfessionalCard = ({
   return (
     <div className="professional-card">
 
-      {/* IMAGE */}
       <div className="professional-card-image">
         <img
           src={image}
@@ -26,8 +25,6 @@ const ProfessionalCard = ({
         />
       </div>
 
-
-      {/* CONTENT */}
       <div className="professional-card-content">
 
         <div className="professional-card-rating">
@@ -35,23 +32,16 @@ const ProfessionalCard = ({
           <span>{rating}</span>
         </div>
 
-
-        <h3>
-          {name}
-        </h3>
-
+        <h3>{name}</h3>
 
         <p className="professional-card-profession">
           {profession}
         </p>
 
-
         <p className="professional-card-location">
           📍 {location}
         </p>
 
-
-        {/* PROFILE BUTTON */}
         <button
           type="button"
           className="professional-card-btn"

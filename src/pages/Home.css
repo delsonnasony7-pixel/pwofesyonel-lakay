@@ -1,617 +1,358 @@
 /* =========================================
-   HOME PAGE
-========================================= */
-
-.home {
-  width: 100%;
-  overflow: hidden;
-}
-
-/* =========================================
-   COMMON CONTAINER
-========================================= */
-
-.hero-container,
-.search-container,
-.section-container {
-  width: min(1200px, 92%);
-  margin: 0 auto;
-}
-
-/* =========================================
-   HERO SECTION
-========================================= */
-
-.hero {
-  background: #f5eee4;
-  padding: 90px 0 100px;
-}
-
-.hero-container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 70px;
-}
-
-.hero-content {
-  max-width: 650px;
-}
-
-.hero-badge {
-  display: inline-block;
-  margin-bottom: 18px;
-}
-
-.hero-badge h4 {
-  margin: 0;
-  color: #8b5e3c;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 0 0 22px;
-  color: #3b2416;
-  font-size: clamp(42px, 5vw, 68px);
-  line-height: 1.05;
-  font-weight: 800;
-  letter-spacing: -2px;
-}
-
-.hero h1 span {
-  color: #9a6a45;
-}
-
-.hero-content > p {
-  max-width: 600px;
-  margin: 0 0 32px;
-  color: #6e5a4a;
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-.hero-buttons {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.primary-btn,
-.secondary-btn {
-  border: none;
-  padding: 15px 24px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.primary-btn {
-  background: #5c3824;
-  color: #fff;
-}
-
-.primary-btn:hover {
-  background: #3f2518;
-  transform: translateY(-2px);
-}
-
-.secondary-btn {
-  background: transparent;
-  color: #5c3824;
-  border: 1px solid #b99b82;
-}
-
-.secondary-btn:hover {
-  background: #fff;
-  transform: translateY(-2px);
-}
-
-/* =========================================
-   HERO VISUAL
-========================================= */
-
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-card {
-  width: 320px;
-  padding: 28px;
-  background: #fff;
-  border: 1px solid #eadfd2;
-  border-radius: 22px;
-  box-shadow: 0 25px 60px rgba(76, 48, 29, 0.14);
-  text-align: center;
-}
-
-.hero-card-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 22px;
-  color: #557052;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.status-dot {
-  width: 9px;
-  height: 9px;
-  background: #6d9b63;
-  border-radius: 50%;
-}
-
-.professional-avatar {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f1e4d6;
-  border-radius: 50%;
-  font-size: 48px;
-}
-
-.hero-card h3 {
-  margin: 0 0 5px;
-  color: #3b2416;
-  font-size: 22px;
-}
-
-.hero-card > p {
-  margin: 0 0 12px;
-  color: #806c5b;
-  font-size: 14px;
-}
-
-.rating {
-  margin-bottom: 12px;
-  color: #d18a28;
-  font-size: 16px;
-  letter-spacing: 2px;
-}
-
-.rating span {
-  margin-left: 8px;
-  color: #5f5146;
-  font-size: 14px;
-  letter-spacing: 0;
-}
-
-.location {
-  margin-bottom: 20px;
-  color: #716052;
-  font-size: 14px;
-}
-
-.profile-btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 9px;
-  background: #f0e4d8;
-  color: #5c3824;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.profile-btn:hover {
-  background: #dfcdbb;
-}
-
-/* =========================================
-   SEARCH SECTION
-========================================= */
-
-.search-section {
-  padding: 70px 0;
-  background: #fff;
-}
-
-.search-heading {
-  margin-bottom: 28px;
-}
-
-.search-heading > span,
-.section-heading span,
-.center-heading > span {
-  display: block;
-  margin-bottom: 10px;
-  color: #9a6a45;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-}
-
-.search-heading h2,
-.section-heading h2,
-.center-heading h2 {
-  margin: 0 0 10px;
-  color: #3b2416;
-  font-size: 34px;
-  line-height: 1.2;
-}
-
-.search-heading p,
-.center-heading p {
-  margin: 0;
-  color: #766557;
-  line-height: 1.7;
-}
-
-.search-box {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 12px 14px;
-  background: #fff;
-  border: 1px solid #e4d7ca;
-  border-radius: 15px;
-  box-shadow: 0 12px 35px rgba(70, 43, 26, 0.08);
-}
-
-.search-field {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 8px 12px;
-}
-
-.search-icon {
-  font-size: 22px;
-}
-
-.search-field small {
-  display: block;
-  margin-bottom: 4px;
-  color: #856b57;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.search-field input {
-  width: 100%;
-  border: none;
-  outline: none;
-  color: #3b2416;
-  font-size: 14px;
-  background: transparent;
-}
-
-.search-field input::placeholder {
-  color: #a99889;
-}
-
-.search-divider {
-  width: 1px;
-  height: 45px;
-  background: #e5d9ce;
-}
-
-.search-btn {
-  padding: 15px 24px;
-  border: none;
-  border-radius: 10px;
-  background: #5c3824;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.3s ease;
-}
-
-.search-btn:hover {
-  background: #3f2518;
-}
-
-/* =========================================
-   CATEGORIES
-========================================= */
-
-.categories-section {
-  padding: 85px 0;
-  background: #f9f5ef;
-}
-
-.section-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 35px;
-}
-
-.view-all-btn {
-  border: none;
-  background: transparent;
-  color: #7b5134;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.view-all-btn:hover {
-  color: #3f2518;
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-}
-
-.category-card {
-  padding: 25px 15px;
-  background: #fff;
-  border: 1px solid #eadfd3;
-  border-radius: 15px;
-  text-align: center;
-  transition: 0.3s ease;
-  cursor: pointer;
-}
-
-.category-card:hover {
-  transform: translateY(-5px);
-  border-color: #cdb39d;
-  box-shadow: 0 12px 30px rgba(75, 45, 27, 0.08);
-}
-
-.category-icon {
-  width: 55px;
-  height: 55px;
-  margin: 0 auto 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f3e7da;
-  border-radius: 14px;
-  font-size: 25px;
-}
-
-.category-card h3 {
-  margin: 0 0 6px;
-  color: #3f291b;
-  font-size: 15px;
-}
-
-.category-card p {
-  margin: 0;
-  color: #927d6b;
-  font-size: 12px;
-}
-
-/* =========================================
-   PROFESSIONALS
+   RECOMMENDED PROFESSIONALS
 ========================================= */
 
 .professionals-section {
   padding: 90px 0;
-  background: #fff;
+  background: #f7f2eb;
 }
 
-.professionals-grid {
+.professionals-section .section-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.professionals-section .section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.professionals-section .section-heading span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #8b5e3c;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.professionals-section .section-heading h2 {
+  margin: 0;
+
+  color: #3f2b1f;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* Gade tout bouton */
+
+.professionals-section .view-all-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #6f472f;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.professionals-section .view-all-btn:hover {
+  color: #3f2b1f;
+
+  transform: translateX(4px);
+}
+
+
+/* PROFESSIONAL CARDS GRID */
+
+.professionals-section .professionals-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+
+  gap: 26px;
 }
 
-/*
-   ProfessionalCard CSS ap rete nan fichye pa li.
-   Nou pap retire l jiskaske tout fichye yo pare.
-*/
 
 /* =========================================
-   HOW IT WORKS
+   RESPONSIVE
 ========================================= */
 
-.how-section {
-  padding: 95px 0;
-  background: #f5eee4;
+@media (max-width: 900px) {
+
+  .professionals-section .professionals-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
-.center-heading {
-  max-width: 700px;
-  margin: 0 auto 55px;
-  text-align: center;
+
+@media (max-width: 600px) {
+
+  .professionals-section {
+    padding: 65px 0;
+  }
+
+  .professionals-section .section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 30px;
+  }
+
+  .professionals-section .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .professionals-section .professionals-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
-.steps {
+/* =========================================
+   KI SÈVIS OU BEZWEN?
+   PREMIUM CATEGORY CARDS
+========================================= */
+
+.categories-section .categories-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
-.step {
+
+/* CATEGORY CARD */
+
+.categories-section .category-card {
   position: relative;
-  padding: 30px;
-  background: #fff;
-  border: 1px solid #e8dbce;
-  border-radius: 17px;
-  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    #fffdf9 0%,
+    #f8f1e8 100%
+  );
+
+  border: 1px solid #e8ddd1;
+
+  border-radius: 20px;
+
+  padding: 27px;
+
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  box-shadow:
+    0 6px 18px rgba(65, 45, 30, 0.06);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.step-number {
-  width: 58px;
-  height: 58px;
-  margin: 0 auto 20px;
+
+/* TI LIGNE DEKORATIF */
+
+.categories-section .category-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 25px;
+
+  width: 45px;
+  height: 3px;
+
+  background: #7b5135;
+
+  border-radius: 0 0 5px 5px;
+
+  opacity: 0.75;
+}
+
+
+/* HOVER CARD */
+
+.categories-section .category-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c9b29e;
+
+  box-shadow:
+    0 15px 35px rgba(65, 45, 30, 0.12);
+}
+
+
+/* ICON */
+
+.categories-section .category-icon {
+  width: 56px;
+  height: 56px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #5c3824;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 14px;
-  font-weight: 800;
+
+  margin-bottom: 17px;
+
+  background: #f1e5d8;
+
+  border: 1px solid #e4d4c3;
+
+  border-radius: 15px;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 4px 10px rgba(65, 45, 30, 0.06);
+
+  transition: transform 0.3s ease;
 }
 
-.step h3 {
-  margin: 0 0 12px;
-  color: #3b2416;
-  font-size: 19px;
+
+.categories-section .category-card:hover .category-icon {
+  transform: scale(1.06);
 }
 
-.step p {
-  margin: 0;
-  color: #786657;
-  font-size: 14px;
-  line-height: 1.7;
+
+/* TIT */
+
+.categories-section .category-card h3 {
+  margin: 0 0 6px;
+
+  color: #3c2a1f;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.2px;
 }
+
+
+/* KANTITE */
+
+.categories-section .category-count {
+  margin: 0 0 18px;
+
+  color: #8a6a50;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BOUTON - KOUT
+========================================= */
+
+.categories-section .category-professionals-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 9px 14px;
+
+  width: auto;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #5c3b28;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 10px rgba(65, 45, 30, 0.12);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* FLECH */
+
+.categories-section .category-professionals-btn span {
+  font-size: 16px;
+
+  line-height: 1;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.categories-section .category-professionals-btn:hover {
+  background: #754b31;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 15px rgba(65, 45, 30, 0.18);
+}
+
+
+.categories-section .category-professionals-btn:hover span {
+  transform: translateX(4px);
+}
+
 
 /* =========================================
    TABLET
 ========================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 750px;
-    margin: 0 auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-visual {
-    margin-top: 15px;
-  }
-
-  .categories-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .professionals-grid {
+  .categories-section .categories-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .search-box {
-    flex-wrap: wrap;
-  }
-
-  .search-field {
-    min-width: 40%;
-  }
-
-  .search-divider {
-    display: none;
-  }
-
-  .search-btn {
-    width: 100%;
-  }
 }
 
+
 /* =========================================
-   MOBILE
+   TELEFÒN
 ========================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
-  .hero {
-    padding: 65px 0 75px;
-  }
-
-  .hero-container,
-  .search-container,
-  .section-container {
-    width: min(92%, 500px);
-  }
-
-  .hero h1 {
-    font-size: 42px;
-    letter-spacing: -1.5px;
-  }
-
-  .hero-content > p {
-    font-size: 15px;
-  }
-
-  .hero-card {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
-  }
-
-  .search-section,
-  .categories-section,
-  .professionals-section,
-  .how-section {
-    padding: 65px 0;
-  }
-
-  .search-heading h2,
-  .section-heading h2,
-  .center-heading h2 {
-    font-size: 28px;
-  }
-
-  .search-box {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 15px;
-  }
-
-  .search-field {
-    width: 100%;
-    padding: 10px 5px;
-  }
-
-  .search-btn {
-    width: 100%;
-  }
-
-  .section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .category-card {
-    padding: 20px 10px;
-  }
-
-  .professionals-grid {
+  .categories-section .categories-grid {
     grid-template-columns: 1fr;
   }
 
-  .steps {
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .categories-section .category-card {
+    min-height: auto;
+
+    padding: 24px;
   }
 
-  .step {
-    padding: 25px 20px;
-  }
 }
